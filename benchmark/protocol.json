@@ -1,0 +1,18 @@
+{
+  "protocol_version": 1,
+  "seeds": [101, 203, 307],
+  "bootstrap_seed": 811,
+  "bootstrap_draws": 400,
+  "devices": {"train": 18, "calibration": 4, "policy": 4, "test": 10},
+  "windows_per_device": 60,
+  "window_samples": 64,
+  "sample_rate_hz": 32,
+  "event_probability": 0.26,
+  "time_gap_samples": 64,
+  "dropout": {"brief_length": 12, "brief_start_min": 16, "brief_start_max": 36, "sustained_start": 6, "sustained_end": 58},
+  "training_scenarios": ["clean", "brief", "sustained"],
+  "classification_threshold": 0.5,
+  "policy": {"confidence_grid": [0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95], "minimum_scenario_coverage": 0.7, "withhold_cost": 0.18},
+  "cnn": {"epochs": 14, "batch_size": 128, "learning_rate": 0.003, "weight_decay": 0.0001, "cpu_threads": 1},
+  "model_evidence": {"version": "0.7.0", "wheel_sha256": "05cc0ea20a4bc907d74dd67722880c5d9ab23966216a8466182053dd0ad97ed3"}
+}

@@ -1,0 +1,15 @@
+{
+  "execution_device": "cpu",
+  "machine": "AMD64",
+  "packages": {
+    "matplotlib": "3.10.9",
+    "model-evidence": "0.7.0",
+    "numpy": "2.2.5",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.7.0",
+    "scipy": "1.15.3",
+    "torch": "2.7.1"
+  },
+  "platform": "Windows",
+  "python": "3.10.11"
+}

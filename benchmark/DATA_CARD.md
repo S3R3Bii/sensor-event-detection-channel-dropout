@@ -1,0 +1,11 @@
+# Synthetic sensor data card
+
+**Purpose.** A known-label experiment for a two-channel binary event detector. All signals, groups, times, and labels come from the repository's deterministic generator. There are no subjects, organizations, device serials, clinical records, or external datasets.
+
+**Unit.** One 64-sample nonoverlapping source window at a nominal 32 samples per second. Each device has 60 windows. The generator creates 36 devices per seed. Each device has a random sensor offset, gain, noise and periodic nuisance signal. Planted events have an aligned biphasic pattern with a small inter-channel delay. Negatives include isolated peaks, same-polarity echoes and one-channel lookalikes. The event probability is fixed at 0.26. It is not guaranteed to be exactly 26% in any generated block.
+
+**Partition.** Assign devices and chronological blocks before generating windows. Each of three fixed seeds has 18 training devices, four calibration devices, four policy devices and ten later test devices. Devices and source windows never cross partitions. The generator adds mild block drift. A saved manifest carries start/end samples and content fingerprints. One fixed label-shuffle control permutes training labels before repeating the training views.
+
+**Missingness.** Each source is reused in three views: clean, 12 contiguous samples missing from one channel, and 52 samples missing from the same channel. The brief mask is nested inside the sustained mask. The channel and brief start come from the source-window identifier independently of labels. Each setting shares the same original test labels and source IDs. It models one sensor fault pattern and does not estimate the real-world frequency of such outages.
+
+**Limits.** Artificial signal shape and nuisance distributions set the difficulty. Results can reveal whether the code compares models fairly under this known setup. They cannot establish clinical performance, sensor fusion or tracking capability in the field, other sampling rates or sensor geometries, production reliability, or universal superiority of a neural network. Device bootstrap intervals condition on this generator and the fitted models. The observed accuracy and calibration concern this benchmark alone.

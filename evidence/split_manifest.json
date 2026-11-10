@@ -1,0 +1,1355 @@
+[
+  {
+    "devices": [
+      {
+        "device": 30,
+        "end": 3839,
+        "split": "train",
+        "start": 0
+      },
+      {
+        "device": 17,
+        "end": 7744,
+        "split": "train",
+        "start": 3905
+      },
+      {
+        "device": 27,
+        "end": 11649,
+        "split": "train",
+        "start": 7810
+      },
+      {
+        "device": 8,
+        "end": 15554,
+        "split": "train",
+        "start": 11715
+      },
+      {
+        "device": 19,
+        "end": 19459,
+        "split": "train",
+        "start": 15620
+      },
+      {
+        "device": 16,
+        "end": 23364,
+        "split": "train",
+        "start": 19525
+      },
+      {
+        "device": 20,
+        "end": 27269,
+        "split": "train",
+        "start": 23430
+      },
+      {
+        "device": 9,
+        "end": 31174,
+        "split": "train",
+        "start": 27335
+      },
+      {
+        "device": 3,
+        "end": 35079,
+        "split": "train",
+        "start": 31240
+      },
+      {
+        "device": 31,
+        "end": 38984,
+        "split": "train",
+        "start": 35145
+      },
+      {
+        "device": 7,
+        "end": 42889,
+        "split": "train",
+        "start": 39050
+      },
+      {
+        "device": 4,
+        "end": 46794,
+        "split": "train",
+        "start": 42955
+      },
+      {
+        "device": 12,
+        "end": 50699,
+        "split": "train",
+        "start": 46860
+      },
+      {
+        "device": 34,
+        "end": 54604,
+        "split": "train",
+        "start": 50765
+      },
+      {
+        "device": 15,
+        "end": 58509,
+        "split": "train",
+        "start": 54670
+      },
+      {
+        "device": 2,
+        "end": 62414,
+        "split": "train",
+        "start": 58575
+      },
+      {
+        "device": 1,
+        "end": 66319,
+        "split": "train",
+        "start": 62480
+      },
+      {
+        "device": 11,
+        "end": 70224,
+        "split": "train",
+        "start": 66385
+      }
+    ],
+    "events": 277,
+    "fingerprint": "fdef822a96fad85bffc8b161fed8dccd5e30af23489ca40e4a009f894c1fb817",
+    "incoming_audit": [],
+    "partition": "train",
+    "seed": 101,
+    "windows": 1080
+  },
+  {
+    "devices": [
+      {
+        "device": 21,
+        "end": 74129,
+        "split": "calibration",
+        "start": 70290
+      },
+      {
+        "device": 13,
+        "end": 78034,
+        "split": "calibration",
+        "start": 74195
+      },
+      {
+        "device": 18,
+        "end": 81939,
+        "split": "calibration",
+        "start": 78100
+      },
+      {
+        "device": 25,
+        "end": 85844,
+        "split": "calibration",
+        "start": 82005
+      }
+    ],
+    "events": 53,
+    "fingerprint": "2b673c708fa8eaf427a80575bf454b84ff8e6442851ae79c37d248121315aac6",
+    "incoming_audit": [
+      {
+        "diagnostic": "Disjoint rows; optional disjoint entities and strictly forward time",
+        "limitations": [
+          "Disjoint positions do not rule out content leakage, repeated entities without metadata, or tuning on final outcomes."
+        ],
+        "observed": {
+          "duplicate_positions": 0,
+          "evaluation_rows": 240,
+          "group": "training versus evaluation",
+          "group_audit_supplied": true,
+          "overlapping_groups": 0,
+          "overlapping_positions": 0,
+          "training_rows": 1080,
+          "variables": [
+            "row positions",
+            "entity groups"
+          ]
+        },
+        "provenance": {
+          "implementation": "model-evidence/0.2.0",
+          "stage": "supplied_arrays"
+        },
+        "remedies": [],
+        "requirement": "split_integrity",
+        "sample_size": 1320,
+        "source": "automated",
+        "status": "no_issue_detected",
+        "thresholds": {
+          "configuration_source": "model-evidence/0.2.0 defaults unless supplied argument",
+          "gap": 64.0,
+          "maximum_overlap": 0,
+          "rationale": "Training/evaluation positions and supplied entity groups must not cross; temporal strategy requires strict forward order.",
+          "strategy": "time"
+        }
+      },
+      {
+        "diagnostic": "Strict training-before-evaluation order",
+        "limitations": [
+          "Choose gaps, label windows, and rolling-origin folds for the actual forecast horizon."
+        ],
+        "observed": {
+          "evaluation_minimum_time": 70290.0,
+          "group": "training versus evaluation",
+          "training_maximum_time": 70224.0,
+          "variables": [
+            "time"
+          ]
+        },
+        "provenance": {
+          "implementation": "model-evidence/0.2.0",
+          "stage": "supplied_arrays"
+        },
+        "remedies": [],
+        "requirement": "time_order",
+        "sample_size": 1320,
+        "source": "automated",
+        "status": "no_issue_detected",
+        "thresholds": {
+          "comparison": "training maximum + gap < evaluation minimum",
+          "configuration_source": "model-evidence/0.2.0 defaults unless supplied argument",
+          "gap": 64.0,
+          "rationale": "Strictly later evaluation with the caller's gap avoids direct ordering violations; label windows need separate review."
+        }
+      }
+    ],
+    "partition": "calibration",
+    "seed": 101,
+    "windows": 240
+  },
+  {
+    "devices": [
+      {
+        "device": 24,
+        "end": 89749,
+        "split": "policy",
+        "start": 85910
+      },
+      {
+        "device": 0,
+        "end": 93654,
+        "split": "policy",
+        "start": 89815
+      },
+      {
+        "device": 14,
+        "end": 97559,
+        "split": "policy",
+        "start": 93720
+      },
+      {
+        "device": 23,
+        "end": 101464,
+        "split": "policy",
+        "start": 97625
+      }
+    ],
+    "events": 74,
+    "fingerprint": "e064583b662d29b2545971da516fc52bd9deeef63b16b45f86ff590ab21ea45c",
+    "incoming_audit": [
+      {
+        "diagnostic": "Disjoint rows; optional disjoint entities and strictly forward time",
+        "limitations": [
+          "Disjoint positions do not rule out content leakage, repeated entities without metadata, or tuning on final outcomes."
+        ],
+        "observed": {
+          "duplicate_positions": 0,
+          "evaluation_rows": 240,
+          "group": "training versus evaluation",
+          "group_audit_supplied": true,
+          "overlapping_groups": 0,
+          "overlapping_positions": 0,
+          "training_rows": 240,
+          "variables": [
+            "row positions",
+            "entity groups"
+          ]
+        },
+        "provenance": {
+          "implementation": "model-evidence/0.2.0",
+          "stage": "supplied_arrays"
+        },
+        "remedies": [],
+        "requirement": "split_integrity",
+        "sample_size": 480,
+        "source": "automated",
+        "status": "no_issue_detected",
+        "thresholds": {
+          "configuration_source": "model-evidence/0.2.0 defaults unless supplied argument",
+          "gap": 64.0,
+          "maximum_overlap": 0,
+          "rationale": "Training/evaluation positions and supplied entity groups must not cross; temporal strategy requires strict forward order.",
+          "strategy": "time"
+        }
+      },
+      {
+        "diagnostic": "Strict training-before-evaluation order",
+        "limitations": [
+          "Choose gaps, label windows, and rolling-origin folds for the actual forecast horizon."
+        ],
+        "observed": {
+          "evaluation_minimum_time": 85910.0,
+          "group": "training versus evaluation",
+          "training_maximum_time": 85844.0,
+          "variables": [
+            "time"
+          ]
+        },
+        "provenance": {
+          "implementation": "model-evidence/0.2.0",
+          "stage": "supplied_arrays"
+        },
+        "remedies": [],
+        "requirement": "time_order",
+        "sample_size": 480,
+        "source": "automated",
+        "status": "no_issue_detected",
+        "thresholds": {
+          "comparison": "training maximum + gap < evaluation minimum",
+          "configuration_source": "model-evidence/0.2.0 defaults unless supplied argument",
+          "gap": 64.0,
+          "rationale": "Strictly later evaluation with the caller's gap avoids direct ordering violations; label windows need separate review."
+        }
+      }
+    ],
+    "partition": "policy",
+    "seed": 101,
+    "windows": 240
+  },
+  {
+    "devices": [
+      {
+        "device": 33,
+        "end": 105369,
+        "split": "test",
+        "start": 101530
+      },
+      {
+        "device": 26,
+        "end": 109274,
+        "split": "test",
+        "start": 105435
+      },
+      {
+        "device": 10,
+        "end": 113179,
+        "split": "test",
+        "start": 109340
+      },
+      {
+        "device": 22,
+        "end": 117084,
+        "split": "test",
+        "start": 113245
+      },
+      {
+        "device": 28,
+        "end": 120989,
+        "split": "test",
+        "start": 117150
+      },
+      {
+        "device": 35,
+        "end": 124894,
+        "split": "test",
+        "start": 121055
+      },
+      {
+        "device": 6,
+        "end": 128799,
+        "split": "test",
+        "start": 124960
+      },
+      {
+        "device": 5,
+        "end": 132704,
+        "split": "test",
+        "start": 128865
+      },
+      {
+        "device": 29,
+        "end": 136609,
+        "split": "test",
+        "start": 132770
+      },
+      {
+        "device": 32,
+        "end": 140514,
+        "split": "test",
+        "start": 136675
+      }
+    ],
+    "events": 163,
+    "fingerprint": "ee4f3a7b285b3ecd63e21257b2a9cd0160cd208c37c2bbef6fff50db62a6ef11",
+    "incoming_audit": [
+      {
+        "diagnostic": "Disjoint rows; optional disjoint entities and strictly forward time",
+        "limitations": [
+          "Disjoint positions do not rule out content leakage, repeated entities without metadata, or tuning on final outcomes."
+        ],
+        "observed": {
+          "duplicate_positions": 0,
+          "evaluation_rows": 600,
+          "group": "training versus evaluation",
+          "group_audit_supplied": true,
+          "overlapping_groups": 0,
+          "overlapping_positions": 0,
+          "training_rows": 240,
+          "variables": [
+            "row positions",
+            "entity groups"
+          ]
+        },
+        "provenance": {
+          "implementation": "model-evidence/0.2.0",
+          "stage": "supplied_arrays"
+        },
+        "remedies": [],
+        "requirement": "split_integrity",
+        "sample_size": 840,
+        "source": "automated",
+        "status": "no_issue_detected",
+        "thresholds": {
+          "configuration_source": "model-evidence/0.2.0 defaults unless supplied argument",
+          "gap": 64.0,
+          "maximum_overlap": 0,
+          "rationale": "Training/evaluation positions and supplied entity groups must not cross; temporal strategy requires strict forward order.",
+          "strategy": "time"
+        }
+      },
+      {
+        "diagnostic": "Strict training-before-evaluation order",
+        "limitations": [
+          "Choose gaps, label windows, and rolling-origin folds for the actual forecast horizon."
+        ],
+        "observed": {
+          "evaluation_minimum_time": 101530.0,
+          "group": "training versus evaluation",
+          "training_maximum_time": 101464.0,
+          "variables": [
+            "time"
+          ]
+        },
+        "provenance": {
+          "implementation": "model-evidence/0.2.0",
+          "stage": "supplied_arrays"
+        },
+        "remedies": [],
+        "requirement": "time_order",
+        "sample_size": 840,
+        "source": "automated",
+        "status": "no_issue_detected",
+        "thresholds": {
+          "comparison": "training maximum + gap < evaluation minimum",
+          "configuration_source": "model-evidence/0.2.0 defaults unless supplied argument",
+          "gap": 64.0,
+          "rationale": "Strictly later evaluation with the caller's gap avoids direct ordering violations; label windows need separate review."
+        }
+      }
+    ],
+    "partition": "test",
+    "seed": 101,
+    "windows": 600
+  },
+  {
+    "devices": [
+      {
+        "device": 10,
+        "end": 3839,
+        "split": "train",
+        "start": 0
+      },
+      {
+        "device": 17,
+        "end": 7744,
+        "split": "train",
+        "start": 3905
+      },
+      {
+        "device": 1,
+        "end": 11649,
+        "split": "train",
+        "start": 7810
+      },
+      {
+        "device": 34,
+        "end": 15554,
+        "split": "train",
+        "start": 11715
+      },
+      {
+        "device": 4,
+        "end": 19459,
+        "split": "train",
+        "start": 15620
+      },
+      {
+        "device": 32,
+        "end": 23364,
+        "split": "train",
+        "start": 19525
+      },
+      {
+        "device": 14,
+        "end": 27269,
+        "split": "train",
+        "start": 23430
+      },
+      {
+        "device": 24,
+        "end": 31174,
+        "split": "train",
+        "start": 27335
+      },
+      {
+        "device": 11,
+        "end": 35079,
+        "split": "train",
+        "start": 31240
+      },
+      {
+        "device": 35,
+        "end": 38984,
+        "split": "train",
+        "start": 35145
+      },
+      {
+        "device": 25,
+        "end": 42889,
+        "split": "train",
+        "start": 39050
+      },
+      {
+        "device": 13,
+        "end": 46794,
+        "split": "train",
+        "start": 42955
+      },
+      {
+        "device": 18,
+        "end": 50699,
+        "split": "train",
+        "start": 46860
+      },
+      {
+        "device": 12,
+        "end": 54604,
+        "split": "train",
+        "start": 50765
+      },
+      {
+        "device": 9,
+        "end": 58509,
+        "split": "train",
+        "start": 54670
+      },
+      {
+        "device": 15,
+        "end": 62414,
+        "split": "train",
+        "start": 58575
+      },
+      {
+        "device": 31,
+        "end": 66319,
+        "split": "train",
+        "start": 62480
+      },
+      {
+        "device": 21,
+        "end": 70224,
+        "split": "train",
+        "start": 66385
+      }
+    ],
+    "events": 283,
+    "fingerprint": "22da4817efcd4d7db075f1bdfce794d6abc61f5d5ce3c3d5947a85552e7c621d",
+    "incoming_audit": [],
+    "partition": "train",
+    "seed": 203,
+    "windows": 1080
+  },
+  {
+    "devices": [
+      {
+        "device": 28,
+        "end": 74129,
+        "split": "calibration",
+        "start": 70290
+      },
+      {
+        "device": 16,
+        "end": 78034,
+        "split": "calibration",
+        "start": 74195
+      },
+      {
+        "device": 8,
+        "end": 81939,
+        "split": "calibration",
+        "start": 78100
+      },
+      {
+        "device": 30,
+        "end": 85844,
+        "split": "calibration",
+        "start": 82005
+      }
+    ],
+    "events": 53,
+    "fingerprint": "e24b6b384d6f53e7e0d8c4e70869eea533545d9e9f3b27e3c30ebca3cb531a56",
+    "incoming_audit": [
+      {
+        "diagnostic": "Disjoint rows; optional disjoint entities and strictly forward time",
+        "limitations": [
+          "Disjoint positions do not rule out content leakage, repeated entities without metadata, or tuning on final outcomes."
+        ],
+        "observed": {
+          "duplicate_positions": 0,
+          "evaluation_rows": 240,
+          "group": "training versus evaluation",
+          "group_audit_supplied": true,
+          "overlapping_groups": 0,
+          "overlapping_positions": 0,
+          "training_rows": 1080,
+          "variables": [
+            "row positions",
+            "entity groups"
+          ]
+        },
+        "provenance": {
+          "implementation": "model-evidence/0.2.0",
+          "stage": "supplied_arrays"
+        },
+        "remedies": [],
+        "requirement": "split_integrity",
+        "sample_size": 1320,
+        "source": "automated",
+        "status": "no_issue_detected",
+        "thresholds": {
+          "configuration_source": "model-evidence/0.2.0 defaults unless supplied argument",
+          "gap": 64.0,
+          "maximum_overlap": 0,
+          "rationale": "Training/evaluation positions and supplied entity groups must not cross; temporal strategy requires strict forward order.",
+          "strategy": "time"
+        }
+      },
+      {
+        "diagnostic": "Strict training-before-evaluation order",
+        "limitations": [
+          "Choose gaps, label windows, and rolling-origin folds for the actual forecast horizon."
+        ],
+        "observed": {
+          "evaluation_minimum_time": 70290.0,
+          "group": "training versus evaluation",
+          "training_maximum_time": 70224.0,
+          "variables": [
+            "time"
+          ]
+        },
+        "provenance": {
+          "implementation": "model-evidence/0.2.0",
+          "stage": "supplied_arrays"
+        },
+        "remedies": [],
+        "requirement": "time_order",
+        "sample_size": 1320,
+        "source": "automated",
+        "status": "no_issue_detected",
+        "thresholds": {
+          "comparison": "training maximum + gap < evaluation minimum",
+          "configuration_source": "model-evidence/0.2.0 defaults unless supplied argument",
+          "gap": 64.0,
+          "rationale": "Strictly later evaluation with the caller's gap avoids direct ordering violations; label windows need separate review."
+        }
+      }
+    ],
+    "partition": "calibration",
+    "seed": 203,
+    "windows": 240
+  },
+  {
+    "devices": [
+      {
+        "device": 27,
+        "end": 89749,
+        "split": "policy",
+        "start": 85910
+      },
+      {
+        "device": 33,
+        "end": 93654,
+        "split": "policy",
+        "start": 89815
+      },
+      {
+        "device": 5,
+        "end": 97559,
+        "split": "policy",
+        "start": 93720
+      },
+      {
+        "device": 26,
+        "end": 101464,
+        "split": "policy",
+        "start": 97625
+      }
+    ],
+    "events": 57,
+    "fingerprint": "3944409d51ac57a89bdc72f70e409c04cb59a6848f7aabe7dbf8eab2994ad20b",
+    "incoming_audit": [
+      {
+        "diagnostic": "Disjoint rows; optional disjoint entities and strictly forward time",
+        "limitations": [
+          "Disjoint positions do not rule out content leakage, repeated entities without metadata, or tuning on final outcomes."
+        ],
+        "observed": {
+          "duplicate_positions": 0,
+          "evaluation_rows": 240,
+          "group": "training versus evaluation",
+          "group_audit_supplied": true,
+          "overlapping_groups": 0,
+          "overlapping_positions": 0,
+          "training_rows": 240,
+          "variables": [
+            "row positions",
+            "entity groups"
+          ]
+        },
+        "provenance": {
+          "implementation": "model-evidence/0.2.0",
+          "stage": "supplied_arrays"
+        },
+        "remedies": [],
+        "requirement": "split_integrity",
+        "sample_size": 480,
+        "source": "automated",
+        "status": "no_issue_detected",
+        "thresholds": {
+          "configuration_source": "model-evidence/0.2.0 defaults unless supplied argument",
+          "gap": 64.0,
+          "maximum_overlap": 0,
+          "rationale": "Training/evaluation positions and supplied entity groups must not cross; temporal strategy requires strict forward order.",
+          "strategy": "time"
+        }
+      },
+      {
+        "diagnostic": "Strict training-before-evaluation order",
+        "limitations": [
+          "Choose gaps, label windows, and rolling-origin folds for the actual forecast horizon."
+        ],
+        "observed": {
+          "evaluation_minimum_time": 85910.0,
+          "group": "training versus evaluation",
+          "training_maximum_time": 85844.0,
+          "variables": [
+            "time"
+          ]
+        },
+        "provenance": {
+          "implementation": "model-evidence/0.2.0",
+          "stage": "supplied_arrays"
+        },
+        "remedies": [],
+        "requirement": "time_order",
+        "sample_size": 480,
+        "source": "automated",
+        "status": "no_issue_detected",
+        "thresholds": {
+          "comparison": "training maximum + gap < evaluation minimum",
+          "configuration_source": "model-evidence/0.2.0 defaults unless supplied argument",
+          "gap": 64.0,
+          "rationale": "Strictly later evaluation with the caller's gap avoids direct ordering violations; label windows need separate review."
+        }
+      }
+    ],
+    "partition": "policy",
+    "seed": 203,
+    "windows": 240
+  },
+  {
+    "devices": [
+      {
+        "device": 3,
+        "end": 105369,
+        "split": "test",
+        "start": 101530
+      },
+      {
+        "device": 2,
+        "end": 109274,
+        "split": "test",
+        "start": 105435
+      },
+      {
+        "device": 29,
+        "end": 113179,
+        "split": "test",
+        "start": 109340
+      },
+      {
+        "device": 23,
+        "end": 117084,
+        "split": "test",
+        "start": 113245
+      },
+      {
+        "device": 22,
+        "end": 120989,
+        "split": "test",
+        "start": 117150
+      },
+      {
+        "device": 0,
+        "end": 124894,
+        "split": "test",
+        "start": 121055
+      },
+      {
+        "device": 7,
+        "end": 128799,
+        "split": "test",
+        "start": 124960
+      },
+      {
+        "device": 19,
+        "end": 132704,
+        "split": "test",
+        "start": 128865
+      },
+      {
+        "device": 6,
+        "end": 136609,
+        "split": "test",
+        "start": 132770
+      },
+      {
+        "device": 20,
+        "end": 140514,
+        "split": "test",
+        "start": 136675
+      }
+    ],
+    "events": 162,
+    "fingerprint": "4bf06730d685638eaa30ef7369abe3eee2e7f7d1a2541bc2804be0d5767ecd01",
+    "incoming_audit": [
+      {
+        "diagnostic": "Disjoint rows; optional disjoint entities and strictly forward time",
+        "limitations": [
+          "Disjoint positions do not rule out content leakage, repeated entities without metadata, or tuning on final outcomes."
+        ],
+        "observed": {
+          "duplicate_positions": 0,
+          "evaluation_rows": 600,
+          "group": "training versus evaluation",
+          "group_audit_supplied": true,
+          "overlapping_groups": 0,
+          "overlapping_positions": 0,
+          "training_rows": 240,
+          "variables": [
+            "row positions",
+            "entity groups"
+          ]
+        },
+        "provenance": {
+          "implementation": "model-evidence/0.2.0",
+          "stage": "supplied_arrays"
+        },
+        "remedies": [],
+        "requirement": "split_integrity",
+        "sample_size": 840,
+        "source": "automated",
+        "status": "no_issue_detected",
+        "thresholds": {
+          "configuration_source": "model-evidence/0.2.0 defaults unless supplied argument",
+          "gap": 64.0,
+          "maximum_overlap": 0,
+          "rationale": "Training/evaluation positions and supplied entity groups must not cross; temporal strategy requires strict forward order.",
+          "strategy": "time"
+        }
+      },
+      {
+        "diagnostic": "Strict training-before-evaluation order",
+        "limitations": [
+          "Choose gaps, label windows, and rolling-origin folds for the actual forecast horizon."
+        ],
+        "observed": {
+          "evaluation_minimum_time": 101530.0,
+          "group": "training versus evaluation",
+          "training_maximum_time": 101464.0,
+          "variables": [
+            "time"
+          ]
+        },
+        "provenance": {
+          "implementation": "model-evidence/0.2.0",
+          "stage": "supplied_arrays"
+        },
+        "remedies": [],
+        "requirement": "time_order",
+        "sample_size": 840,
+        "source": "automated",
+        "status": "no_issue_detected",
+        "thresholds": {
+          "comparison": "training maximum + gap < evaluation minimum",
+          "configuration_source": "model-evidence/0.2.0 defaults unless supplied argument",
+          "gap": 64.0,
+          "rationale": "Strictly later evaluation with the caller's gap avoids direct ordering violations; label windows need separate review."
+        }
+      }
+    ],
+    "partition": "test",
+    "seed": 203,
+    "windows": 600
+  },
+  {
+    "devices": [
+      {
+        "device": 5,
+        "end": 3839,
+        "split": "train",
+        "start": 0
+      },
+      {
+        "device": 33,
+        "end": 7744,
+        "split": "train",
+        "start": 3905
+      },
+      {
+        "device": 27,
+        "end": 11649,
+        "split": "train",
+        "start": 7810
+      },
+      {
+        "device": 31,
+        "end": 15554,
+        "split": "train",
+        "start": 11715
+      },
+      {
+        "device": 15,
+        "end": 19459,
+        "split": "train",
+        "start": 15620
+      },
+      {
+        "device": 23,
+        "end": 23364,
+        "split": "train",
+        "start": 19525
+      },
+      {
+        "device": 7,
+        "end": 27269,
+        "split": "train",
+        "start": 23430
+      },
+      {
+        "device": 2,
+        "end": 31174,
+        "split": "train",
+        "start": 27335
+      },
+      {
+        "device": 16,
+        "end": 35079,
+        "split": "train",
+        "start": 31240
+      },
+      {
+        "device": 28,
+        "end": 38984,
+        "split": "train",
+        "start": 35145
+      },
+      {
+        "device": 4,
+        "end": 42889,
+        "split": "train",
+        "start": 39050
+      },
+      {
+        "device": 25,
+        "end": 46794,
+        "split": "train",
+        "start": 42955
+      },
+      {
+        "device": 30,
+        "end": 50699,
+        "split": "train",
+        "start": 46860
+      },
+      {
+        "device": 20,
+        "end": 54604,
+        "split": "train",
+        "start": 50765
+      },
+      {
+        "device": 22,
+        "end": 58509,
+        "split": "train",
+        "start": 54670
+      },
+      {
+        "device": 8,
+        "end": 62414,
+        "split": "train",
+        "start": 58575
+      },
+      {
+        "device": 12,
+        "end": 66319,
+        "split": "train",
+        "start": 62480
+      },
+      {
+        "device": 1,
+        "end": 70224,
+        "split": "train",
+        "start": 66385
+      }
+    ],
+    "events": 289,
+    "fingerprint": "22ee00fdc5683772c9ead5376fc176cdfc04ed9c4ac72493e63b8b67b3afbd95",
+    "incoming_audit": [],
+    "partition": "train",
+    "seed": 307,
+    "windows": 1080
+  },
+  {
+    "devices": [
+      {
+        "device": 17,
+        "end": 74129,
+        "split": "calibration",
+        "start": 70290
+      },
+      {
+        "device": 26,
+        "end": 78034,
+        "split": "calibration",
+        "start": 74195
+      },
+      {
+        "device": 13,
+        "end": 81939,
+        "split": "calibration",
+        "start": 78100
+      },
+      {
+        "device": 24,
+        "end": 85844,
+        "split": "calibration",
+        "start": 82005
+      }
+    ],
+    "events": 53,
+    "fingerprint": "840de1a2f5dc9ef769720bb241ad2f8e74db9edd3ad98d088c661df69da57c7e",
+    "incoming_audit": [
+      {
+        "diagnostic": "Disjoint rows; optional disjoint entities and strictly forward time",
+        "limitations": [
+          "Disjoint positions do not rule out content leakage, repeated entities without metadata, or tuning on final outcomes."
+        ],
+        "observed": {
+          "duplicate_positions": 0,
+          "evaluation_rows": 240,
+          "group": "training versus evaluation",
+          "group_audit_supplied": true,
+          "overlapping_groups": 0,
+          "overlapping_positions": 0,
+          "training_rows": 1080,
+          "variables": [
+            "row positions",
+            "entity groups"
+          ]
+        },
+        "provenance": {
+          "implementation": "model-evidence/0.2.0",
+          "stage": "supplied_arrays"
+        },
+        "remedies": [],
+        "requirement": "split_integrity",
+        "sample_size": 1320,
+        "source": "automated",
+        "status": "no_issue_detected",
+        "thresholds": {
+          "configuration_source": "model-evidence/0.2.0 defaults unless supplied argument",
+          "gap": 64.0,
+          "maximum_overlap": 0,
+          "rationale": "Training/evaluation positions and supplied entity groups must not cross; temporal strategy requires strict forward order.",
+          "strategy": "time"
+        }
+      },
+      {
+        "diagnostic": "Strict training-before-evaluation order",
+        "limitations": [
+          "Choose gaps, label windows, and rolling-origin folds for the actual forecast horizon."
+        ],
+        "observed": {
+          "evaluation_minimum_time": 70290.0,
+          "group": "training versus evaluation",
+          "training_maximum_time": 70224.0,
+          "variables": [
+            "time"
+          ]
+        },
+        "provenance": {
+          "implementation": "model-evidence/0.2.0",
+          "stage": "supplied_arrays"
+        },
+        "remedies": [],
+        "requirement": "time_order",
+        "sample_size": 1320,
+        "source": "automated",
+        "status": "no_issue_detected",
+        "thresholds": {
+          "comparison": "training maximum + gap < evaluation minimum",
+          "configuration_source": "model-evidence/0.2.0 defaults unless supplied argument",
+          "gap": 64.0,
+          "rationale": "Strictly later evaluation with the caller's gap avoids direct ordering violations; label windows need separate review."
+        }
+      }
+    ],
+    "partition": "calibration",
+    "seed": 307,
+    "windows": 240
+  },
+  {
+    "devices": [
+      {
+        "device": 34,
+        "end": 89749,
+        "split": "policy",
+        "start": 85910
+      },
+      {
+        "device": 19,
+        "end": 93654,
+        "split": "policy",
+        "start": 89815
+      },
+      {
+        "device": 11,
+        "end": 97559,
+        "split": "policy",
+        "start": 93720
+      },
+      {
+        "device": 9,
+        "end": 101464,
+        "split": "policy",
+        "start": 97625
+      }
+    ],
+    "events": 62,
+    "fingerprint": "ce975c127c43810ecd1ac7fe7904027e695f872de7421be52d349faaea88737d",
+    "incoming_audit": [
+      {
+        "diagnostic": "Disjoint rows; optional disjoint entities and strictly forward time",
+        "limitations": [
+          "Disjoint positions do not rule out content leakage, repeated entities without metadata, or tuning on final outcomes."
+        ],
+        "observed": {
+          "duplicate_positions": 0,
+          "evaluation_rows": 240,
+          "group": "training versus evaluation",
+          "group_audit_supplied": true,
+          "overlapping_groups": 0,
+          "overlapping_positions": 0,
+          "training_rows": 240,
+          "variables": [
+            "row positions",
+            "entity groups"
+          ]
+        },
+        "provenance": {
+          "implementation": "model-evidence/0.2.0",
+          "stage": "supplied_arrays"
+        },
+        "remedies": [],
+        "requirement": "split_integrity",
+        "sample_size": 480,
+        "source": "automated",
+        "status": "no_issue_detected",
+        "thresholds": {
+          "configuration_source": "model-evidence/0.2.0 defaults unless supplied argument",
+          "gap": 64.0,
+          "maximum_overlap": 0,
+          "rationale": "Training/evaluation positions and supplied entity groups must not cross; temporal strategy requires strict forward order.",
+          "strategy": "time"
+        }
+      },
+      {
+        "diagnostic": "Strict training-before-evaluation order",
+        "limitations": [
+          "Choose gaps, label windows, and rolling-origin folds for the actual forecast horizon."
+        ],
+        "observed": {
+          "evaluation_minimum_time": 85910.0,
+          "group": "training versus evaluation",
+          "training_maximum_time": 85844.0,
+          "variables": [
+            "time"
+          ]
+        },
+        "provenance": {
+          "implementation": "model-evidence/0.2.0",
+          "stage": "supplied_arrays"
+        },
+        "remedies": [],
+        "requirement": "time_order",
+        "sample_size": 480,
+        "source": "automated",
+        "status": "no_issue_detected",
+        "thresholds": {
+          "comparison": "training maximum + gap < evaluation minimum",
+          "configuration_source": "model-evidence/0.2.0 defaults unless supplied argument",
+          "gap": 64.0,
+          "rationale": "Strictly later evaluation with the caller's gap avoids direct ordering violations; label windows need separate review."
+        }
+      }
+    ],
+    "partition": "policy",
+    "seed": 307,
+    "windows": 240
+  },
+  {
+    "devices": [
+      {
+        "device": 3,
+        "end": 105369,
+        "split": "test",
+        "start": 101530
+      },
+      {
+        "device": 14,
+        "end": 109274,
+        "split": "test",
+        "start": 105435
+      },
+      {
+        "device": 29,
+        "end": 113179,
+        "split": "test",
+        "start": 109340
+      },
+      {
+        "device": 0,
+        "end": 117084,
+        "split": "test",
+        "start": 113245
+      },
+      {
+        "device": 10,
+        "end": 120989,
+        "split": "test",
+        "start": 117150
+      },
+      {
+        "device": 21,
+        "end": 124894,
+        "split": "test",
+        "start": 121055
+      },
+      {
+        "device": 32,
+        "end": 128799,
+        "split": "test",
+        "start": 124960
+      },
+      {
+        "device": 6,
+        "end": 132704,
+        "split": "test",
+        "start": 128865
+      },
+      {
+        "device": 35,
+        "end": 136609,
+        "split": "test",
+        "start": 132770
+      },
+      {
+        "device": 18,
+        "end": 140514,
+        "split": "test",
+        "start": 136675
+      }
+    ],
+    "events": 157,
+    "fingerprint": "08e60c16a1a80f3f290613100a314dca989efed45a06e81a7c68ce0c9f67a5ae",
+    "incoming_audit": [
+      {
+        "diagnostic": "Disjoint rows; optional disjoint entities and strictly forward time",
+        "limitations": [
+          "Disjoint positions do not rule out content leakage, repeated entities without metadata, or tuning on final outcomes."
+        ],
+        "observed": {
+          "duplicate_positions": 0,
+          "evaluation_rows": 600,
+          "group": "training versus evaluation",
+          "group_audit_supplied": true,
+          "overlapping_groups": 0,
+          "overlapping_positions": 0,
+          "training_rows": 240,
+          "variables": [
+            "row positions",
+            "entity groups"
+          ]
+        },
+        "provenance": {
+          "implementation": "model-evidence/0.2.0",
+          "stage": "supplied_arrays"
+        },
+        "remedies": [],
+        "requirement": "split_integrity",
+        "sample_size": 840,
+        "source": "automated",
+        "status": "no_issue_detected",
+        "thresholds": {
+          "configuration_source": "model-evidence/0.2.0 defaults unless supplied argument",
+          "gap": 64.0,
+          "maximum_overlap": 0,
+          "rationale": "Training/evaluation positions and supplied entity groups must not cross; temporal strategy requires strict forward order.",
+          "strategy": "time"
+        }
+      },
+      {
+        "diagnostic": "Strict training-before-evaluation order",
+        "limitations": [
+          "Choose gaps, label windows, and rolling-origin folds for the actual forecast horizon."
+        ],
+        "observed": {
+          "evaluation_minimum_time": 101530.0,
+          "group": "training versus evaluation",
+          "training_maximum_time": 101464.0,
+          "variables": [
+            "time"
+          ]
+        },
+        "provenance": {
+          "implementation": "model-evidence/0.2.0",
+          "stage": "supplied_arrays"
+        },
+        "remedies": [],
+        "requirement": "time_order",
+        "sample_size": 840,
+        "source": "automated",
+        "status": "no_issue_detected",
+        "thresholds": {
+          "comparison": "training maximum + gap < evaluation minimum",
+          "configuration_source": "model-evidence/0.2.0 defaults unless supplied argument",
+          "gap": 64.0,
+          "rationale": "Strictly later evaluation with the caller's gap avoids direct ordering violations; label windows need separate review."
+        }
+      }
+    ],
+    "partition": "test",
+    "seed": 307,
+    "windows": 600
+  }
+]

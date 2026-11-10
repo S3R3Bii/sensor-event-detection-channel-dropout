@@ -1,0 +1,701 @@
+{
+  "bootstrap": {
+    "comparisons": {
+      "cnn_minus_logistic_brief": {
+        "average_precision": {
+          "estimate": 0.1961752137875673,
+          "percentile_95": [
+            0.1603664243235076,
+            0.23527028783000853
+          ]
+        },
+        "brier": {
+          "estimate": -0.03918923704694727,
+          "percentile_95": [
+            -0.04705860057732618,
+            -0.028809818410559494
+          ]
+        },
+        "decision_cost": {
+          "estimate": -0.05905555555555553,
+          "percentile_95": [
+            -0.07270027777777778,
+            -0.04476027777777777
+          ]
+        }
+      },
+      "cnn_minus_logistic_clean": {
+        "average_precision": {
+          "estimate": 0.2454526736517656,
+          "percentile_95": [
+            0.2140077329638115,
+            0.2764022288600934
+          ]
+        },
+        "brier": {
+          "estimate": -0.06478164152636892,
+          "percentile_95": [
+            -0.07348170588318466,
+            -0.05483706857214743
+          ]
+        },
+        "decision_cost": {
+          "estimate": -0.08572222222222221,
+          "percentile_95": [
+            -0.09930416666666668,
+            -0.07072333333333335
+          ]
+        }
+      },
+      "cnn_minus_logistic_sustained": {
+        "average_precision": {
+          "estimate": 0.16568946083418323,
+          "percentile_95": [
+            0.11599968018552068,
+            0.20454602589071505
+          ]
+        },
+        "brier": {
+          "estimate": -0.030711892187768486,
+          "percentile_95": [
+            -0.03904193752575717,
+            -0.021457276186973132
+          ]
+        },
+        "decision_cost": {
+          "estimate": -0.04364444444444443,
+          "percentile_95": [
+            -0.056948333333333365,
+            -0.02789305555555557
+          ]
+        }
+      },
+      "cnn_sustained_minus_clean": {
+        "average_precision": {
+          "estimate": -0.2805691720966521,
+          "percentile_95": [
+            -0.30962628020426425,
+            -0.25181415529908896
+          ]
+        },
+        "brier": {
+          "estimate": 0.05897283169083731,
+          "percentile_95": [
+            0.05036757984044049,
+            0.06686215871251013
+          ]
+        },
+        "decision_cost": {
+          "estimate": 0.0692,
+          "percentile_95": [
+            0.05800527777777778,
+            0.08050222222222224
+          ]
+        }
+      },
+      "logistic_sustained_minus_clean": {
+        "average_precision": {
+          "estimate": -0.20080595927906975,
+          "percentile_95": [
+            -0.24204770403002188,
+            -0.15216633553911055
+          ]
+        },
+        "brier": {
+          "estimate": 0.02490308235223687,
+          "percentile_95": [
+            0.017724089090665127,
+            0.03171859770099345
+          ]
+        },
+        "decision_cost": {
+          "estimate": 0.027122222222222214,
+          "percentile_95": [
+            0.012553333333333321,
+            0.04223416666666665
+          ]
+        }
+      }
+    },
+    "devices": 30,
+    "draws": 400,
+    "scope": "Resamples fixed test devices within seeds, conditional on fitted models and synthetic generator.",
+    "valid_draws": 400
+  },
+  "counts": {
+    "cnn_parameters": 1357,
+    "partition_records": {
+      "calibration": 3,
+      "policy": 3,
+      "test": 3,
+      "train": 3
+    },
+    "prediction_rows": 16200,
+    "seeds": 3,
+    "test_devices": 30,
+    "test_windows": 1800,
+    "unique_source_windows": 6480
+  },
+  "failure_analysis": {
+    "clean_correct_sustained_wrong": 209,
+    "examples": [
+      {
+        "channel_missing": 0,
+        "clean_probability": 0.988134717230158,
+        "device": "s101-d33",
+        "label": 1,
+        "sustained_missing_fraction": 0.40625,
+        "sustained_probability": 0.4211717266802377,
+        "sustained_retained": false,
+        "window_id": "s101-d33-w021"
+      },
+      {
+        "channel_missing": 1,
+        "clean_probability": 0.033570548372840715,
+        "device": "s101-d33",
+        "label": 0,
+        "sustained_missing_fraction": 0.40625,
+        "sustained_probability": 0.665481241758783,
+        "sustained_retained": false,
+        "window_id": "s101-d33-w030"
+      },
+      {
+        "channel_missing": 0,
+        "clean_probability": 0.6967984963304569,
+        "device": "s101-d33",
+        "label": 1,
+        "sustained_missing_fraction": 0.40625,
+        "sustained_probability": 0.13745265263374548,
+        "sustained_retained": true,
+        "window_id": "s101-d33-w031"
+      },
+      {
+        "channel_missing": 0,
+        "clean_probability": 0.0315703689394763,
+        "device": "s101-d29",
+        "label": 0,
+        "sustained_missing_fraction": 0.40625,
+        "sustained_probability": 0.7431670550767784,
+        "sustained_retained": true,
+        "window_id": "s101-d29-w003"
+      }
+    ]
+  },
+  "mean_validation_cost": {
+    "cnn": 0.14044444444444446,
+    "logistic": 0.21519444444444447,
+    "prevalence": 0.26805555555555555
+  },
+  "metrics": {
+    "cnn": {
+      "brief": {
+        "accuracy": 0.8022222222222222,
+        "average_precision": 0.6864323363940498,
+        "brier": 0.14242934894420964,
+        "calibration_bins": [
+          {
+            "bin": 0,
+            "event_rate": 0.1125,
+            "mean_probability": 0.04415625918848519,
+            "n": 960
+          },
+          {
+            "bin": 1,
+            "event_rate": 0.17701863354037267,
+            "mean_probability": 0.1417261555791111,
+            "n": 322
+          },
+          {
+            "bin": 2,
+            "event_rate": 0.33858267716535434,
+            "mean_probability": 0.2434838708001347,
+            "n": 127
+          },
+          {
+            "bin": 3,
+            "event_rate": 0.6,
+            "mean_probability": 0.34779422412022026,
+            "n": 85
+          },
+          {
+            "bin": 4,
+            "event_rate": 0.5853658536585366,
+            "mean_probability": 0.446924366452682,
+            "n": 82
+          },
+          {
+            "bin": 5,
+            "event_rate": 0.5769230769230769,
+            "mean_probability": 0.548158636821028,
+            "n": 52
+          },
+          {
+            "bin": 6,
+            "event_rate": 0.7560975609756098,
+            "mean_probability": 0.6503355730199696,
+            "n": 41
+          },
+          {
+            "bin": 7,
+            "event_rate": 0.6857142857142857,
+            "mean_probability": 0.7447887330502329,
+            "n": 35
+          },
+          {
+            "bin": 8,
+            "event_rate": 0.8,
+            "mean_probability": 0.8427188717034043,
+            "n": 25
+          },
+          {
+            "bin": 9,
+            "event_rate": 0.9859154929577465,
+            "mean_probability": 0.9539007741464994,
+            "n": 71
+          }
+        ],
+        "coverage": 0.87,
+        "decision_cost": 0.15451111111111113,
+        "ece_10bin": 0.07393445848225237,
+        "event_prevalence": 0.2677777777777778,
+        "events": 482,
+        "raw_brier": 0.1457674021574978,
+        "risk": 0.15070242656449553,
+        "windows": 1800
+      },
+      "clean": {
+        "accuracy": 0.8522222222222222,
+        "average_precision": 0.7977634040828542,
+        "brier": 0.1111160354924911,
+        "calibration_bins": [
+          {
+            "bin": 0,
+            "event_rate": 0.07870837537840565,
+            "mean_probability": 0.038773161445943276,
+            "n": 991
+          },
+          {
+            "bin": 1,
+            "event_rate": 0.1700404858299595,
+            "mean_probability": 0.13940917076819634,
+            "n": 247
+          },
+          {
+            "bin": 2,
+            "event_rate": 0.30578512396694213,
+            "mean_probability": 0.24623025068380686,
+            "n": 121
+          },
+          {
+            "bin": 3,
+            "event_rate": 0.44155844155844154,
+            "mean_probability": 0.3465867034183119,
+            "n": 77
+          },
+          {
+            "bin": 4,
+            "event_rate": 0.5142857142857142,
+            "mean_probability": 0.44573062852867584,
+            "n": 70
+          },
+          {
+            "bin": 5,
+            "event_rate": 0.6666666666666666,
+            "mean_probability": 0.552831143783074,
+            "n": 45
+          },
+          {
+            "bin": 6,
+            "event_rate": 0.7446808510638298,
+            "mean_probability": 0.6453813322575468,
+            "n": 47
+          },
+          {
+            "bin": 7,
+            "event_rate": 0.8181818181818182,
+            "mean_probability": 0.7489690737942426,
+            "n": 44
+          },
+          {
+            "bin": 8,
+            "event_rate": 0.9302325581395349,
+            "mean_probability": 0.850090436775832,
+            "n": 43
+          },
+          {
+            "bin": 9,
+            "event_rate": 0.991304347826087,
+            "mean_probability": 0.9576640114035235,
+            "n": 115
+          }
+        ],
+        "coverage": 0.8777777777777778,
+        "decision_cost": 0.11922222222222222,
+        "ece_10bin": 0.04811629883795116,
+        "event_prevalence": 0.2677777777777778,
+        "events": 482,
+        "raw_brier": 0.11541113915055416,
+        "risk": 0.11075949367088607,
+        "windows": 1800
+      },
+      "sustained": {
+        "accuracy": 0.7605555555555555,
+        "average_precision": 0.5171942319862021,
+        "brier": 0.1700888671833284,
+        "calibration_bins": [
+          {
+            "bin": 0,
+            "event_rate": 0.09433962264150944,
+            "mean_probability": 0.05770095677001608,
+            "n": 530
+          },
+          {
+            "bin": 1,
+            "event_rate": 0.21933085501858737,
+            "mean_probability": 0.14300836544930012,
+            "n": 538
+          },
+          {
+            "bin": 2,
+            "event_rate": 0.30566037735849055,
+            "mean_probability": 0.24369695080675974,
+            "n": 265
+          },
+          {
+            "bin": 3,
+            "event_rate": 0.35175879396984927,
+            "mean_probability": 0.3478202855599923,
+            "n": 199
+          },
+          {
+            "bin": 4,
+            "event_rate": 0.5360824742268041,
+            "mean_probability": 0.44600908261493954,
+            "n": 97
+          },
+          {
+            "bin": 5,
+            "event_rate": 0.45454545454545453,
+            "mean_probability": 0.5479548391851541,
+            "n": 55
+          },
+          {
+            "bin": 6,
+            "event_rate": 0.6666666666666666,
+            "mean_probability": 0.6484086741294556,
+            "n": 54
+          },
+          {
+            "bin": 7,
+            "event_rate": 0.8529411764705882,
+            "mean_probability": 0.7411944446090241,
+            "n": 34
+          },
+          {
+            "bin": 8,
+            "event_rate": 0.8636363636363636,
+            "mean_probability": 0.8478430802267397,
+            "n": 22
+          },
+          {
+            "bin": 9,
+            "event_rate": 0.3333333333333333,
+            "mean_probability": 0.9265717941736442,
+            "n": 6
+          }
+        ],
+        "coverage": 0.7988888888888889,
+        "decision_cost": 0.1884222222222222,
+        "ece_10bin": 0.05569494562879374,
+        "event_prevalence": 0.2677777777777778,
+        "events": 482,
+        "raw_brier": 0.17263037028225472,
+        "risk": 0.1905424200278164,
+        "windows": 1800
+      }
+    },
+    "logistic": {
+      "brief": {
+        "accuracy": 0.7433333333333333,
+        "average_precision": 0.49025712260648246,
+        "brier": 0.1816185859911569,
+        "calibration_bins": [
+          {
+            "bin": 0,
+            "event_rate": 0.10096153846153846,
+            "mean_probability": 0.06977752260296144,
+            "n": 208
+          },
+          {
+            "bin": 1,
+            "event_rate": 0.19976076555023922,
+            "mean_probability": 0.15358381638486832,
+            "n": 836
+          },
+          {
+            "bin": 2,
+            "event_rate": 0.300187617260788,
+            "mean_probability": 0.23961964200702998,
+            "n": 533
+          },
+          {
+            "bin": 3,
+            "event_rate": 0.5367647058823529,
+            "mean_probability": 0.34155343097576585,
+            "n": 136
+          },
+          {
+            "bin": 4,
+            "event_rate": 0.6415094339622641,
+            "mean_probability": 0.4394932184406388,
+            "n": 53
+          },
+          {
+            "bin": 5,
+            "event_rate": 0.7222222222222222,
+            "mean_probability": 0.5432529262793655,
+            "n": 18
+          },
+          {
+            "bin": 6,
+            "event_rate": 0.8461538461538461,
+            "mean_probability": 0.644792381216764,
+            "n": 13
+          },
+          {
+            "bin": 7,
+            "event_rate": 1.0,
+            "mean_probability": 0.7265194277459419,
+            "n": 3
+          }
+        ],
+        "coverage": 0.8505555555555555,
+        "decision_cost": 0.21356666666666668,
+        "ece_10bin": 0.06738228694941377,
+        "event_prevalence": 0.2677777777777778,
+        "events": 482,
+        "raw_brier": 0.17436874726494334,
+        "risk": 0.2194644023514043,
+        "windows": 1800
+      },
+      "clean": {
+        "accuracy": 0.7455555555555555,
+        "average_precision": 0.5523107304310886,
+        "brier": 0.17589767701886003,
+        "calibration_bins": [
+          {
+            "bin": 0,
+            "event_rate": 0.0794392523364486,
+            "mean_probability": 0.07105428204565424,
+            "n": 214
+          },
+          {
+            "bin": 1,
+            "event_rate": 0.17793594306049823,
+            "mean_probability": 0.1533247867450839,
+            "n": 843
+          },
+          {
+            "bin": 2,
+            "event_rate": 0.31568998109640833,
+            "mean_probability": 0.23876397621833978,
+            "n": 529
+          },
+          {
+            "bin": 3,
+            "event_rate": 0.6397058823529411,
+            "mean_probability": 0.34016967447555607,
+            "n": 136
+          },
+          {
+            "bin": 4,
+            "event_rate": 0.7272727272727273,
+            "mean_probability": 0.4489325155965419,
+            "n": 44
+          },
+          {
+            "bin": 5,
+            "event_rate": 0.7619047619047619,
+            "mean_probability": 0.5324359389371768,
+            "n": 21
+          },
+          {
+            "bin": 6,
+            "event_rate": 1.0,
+            "mean_probability": 0.6437340298633051,
+            "n": 11
+          },
+          {
+            "bin": 7,
+            "event_rate": 1.0,
+            "mean_probability": 0.7200191319306806,
+            "n": 1
+          },
+          {
+            "bin": 8,
+            "event_rate": 1.0,
+            "mean_probability": 0.8269238258837042,
+            "n": 1
+          }
+        ],
+        "coverage": 0.8583333333333333,
+        "decision_cost": 0.20494444444444443,
+        "ece_10bin": 0.06967231476539311,
+        "event_prevalence": 0.2677777777777778,
+        "events": 482,
+        "raw_brier": 0.165998050090115,
+        "risk": 0.20906148867313915,
+        "windows": 1800
+      },
+      "sustained": {
+        "accuracy": 0.7244444444444444,
+        "average_precision": 0.35150477115201884,
+        "brier": 0.20080075937109693,
+        "calibration_bins": [
+          {
+            "bin": 0,
+            "event_rate": 0.20240963855421687,
+            "mean_probability": 0.05885059552329846,
+            "n": 415
+          },
+          {
+            "bin": 1,
+            "event_rate": 0.2218798151001541,
+            "mean_probability": 0.1527413473618655,
+            "n": 649
+          },
+          {
+            "bin": 2,
+            "event_rate": 0.32116788321167883,
+            "mean_probability": 0.24554871176151552,
+            "n": 411
+          },
+          {
+            "bin": 3,
+            "event_rate": 0.34838709677419355,
+            "mean_probability": 0.34097821939990924,
+            "n": 155
+          },
+          {
+            "bin": 4,
+            "event_rate": 0.3780487804878049,
+            "mean_probability": 0.44337035414090603,
+            "n": 82
+          },
+          {
+            "bin": 5,
+            "event_rate": 0.39473684210526316,
+            "mean_probability": 0.5459736230560438,
+            "n": 38
+          },
+          {
+            "bin": 6,
+            "event_rate": 0.34615384615384615,
+            "mean_probability": 0.6515181003888466,
+            "n": 26
+          },
+          {
+            "bin": 7,
+            "event_rate": 0.5263157894736842,
+            "mean_probability": 0.7440001236175255,
+            "n": 19
+          },
+          {
+            "bin": 8,
+            "event_rate": 0.5,
+            "mean_probability": 0.8153944128981856,
+            "n": 2
+          },
+          {
+            "bin": 9,
+            "event_rate": 0.6666666666666666,
+            "mean_probability": 0.9147430931561674,
+            "n": 3
+          }
+        ],
+        "coverage": 0.8033333333333333,
+        "decision_cost": 0.23206666666666667,
+        "ece_10bin": 0.08957198981044635,
+        "event_prevalence": 0.2677777777777778,
+        "events": 482,
+        "raw_brier": 0.20239723988833827,
+        "risk": 0.24481327800829875,
+        "windows": 1800
+      }
+    },
+    "prevalence": {
+      "brief": {
+        "accuracy": 0.7322222222222222,
+        "average_precision": 0.2651337021668972,
+        "brier": 0.19616340877914953,
+        "calibration_bins": [
+          {
+            "bin": 2,
+            "event_rate": 0.2677777777777778,
+            "mean_probability": 0.26203703703703696,
+            "n": 1800
+          }
+        ],
+        "coverage": 1.0,
+        "decision_cost": 0.2677777777777778,
+        "ece_10bin": 0.005740740740740824,
+        "event_prevalence": 0.2677777777777778,
+        "events": 482,
+        "raw_brier": 0.19616340877914953,
+        "risk": 0.2677777777777778,
+        "windows": 1800
+      },
+      "clean": {
+        "accuracy": 0.7322222222222222,
+        "average_precision": 0.2651337021668972,
+        "brier": 0.19616340877914953,
+        "calibration_bins": [
+          {
+            "bin": 2,
+            "event_rate": 0.2677777777777778,
+            "mean_probability": 0.26203703703703696,
+            "n": 1800
+          }
+        ],
+        "coverage": 1.0,
+        "decision_cost": 0.2677777777777778,
+        "ece_10bin": 0.005740740740740824,
+        "event_prevalence": 0.2677777777777778,
+        "events": 482,
+        "raw_brier": 0.19616340877914953,
+        "risk": 0.2677777777777778,
+        "windows": 1800
+      },
+      "sustained": {
+        "accuracy": 0.7322222222222222,
+        "average_precision": 0.2651337021668972,
+        "brier": 0.19616340877914953,
+        "calibration_bins": [
+          {
+            "bin": 2,
+            "event_rate": 0.2677777777777778,
+            "mean_probability": 0.26203703703703696,
+            "n": 1800
+          }
+        ],
+        "coverage": 1.0,
+        "decision_cost": 0.2677777777777778,
+        "ece_10bin": 0.005740740740740824,
+        "event_prevalence": 0.2677777777777778,
+        "events": 482,
+        "raw_brier": 0.19616340877914953,
+        "risk": 0.2677777777777778,
+        "windows": 1800
+      }
+    }
+  },
+  "model_selected_before_test": "cnn",
+  "null_control": {
+    "average_precision": 0.3642780323127527,
+    "event_prevalence": 0.27166666666666667,
+    "interpretation": "Single fixed shuffle of training labels before view replication. Raw probabilities; no calibration or selection.",
+    "scenario": "clean",
+    "seed": 101,
+    "windows": 600
+  }
+}

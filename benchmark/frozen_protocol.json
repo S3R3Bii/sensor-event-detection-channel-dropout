@@ -1,0 +1,13 @@
+{
+  "frozen_utc": "2026-11-10T15:09:14.929248+00:00",
+  "sha256": {
+    "data.py": "a375b403f503fde1593a50bfb9bf6bbf5983b88fa733047c9ad839ff5d84058d",
+    "evaluate.py": "81d06d2787ba3b468dd1c3b7f175517d051cf3be31dc431b16ec3c1d835e1d25",
+    "models.py": "1b589cec281d8d42b36c7799483f52ae80b4ca9b174546dfd574f2389804b5c8",
+    "protocol.json": "b127953fccc58502d93a4534f96b0cb9df4dad80092138799f6d8b24823f41f6",
+    "run.py": "a793dd7c02eea930ba83ebeb31340d6dc83074feca504408d76a97ea999e5943",
+    "test_benchmark.py": "2ad5507d9355d9e3b8634db95d0dba6b0d89a7785dd2b9a072bdfe97028bdf15",
+    "verify_results.py": "0829d4dcda92fa2e814d0345c0d33ee1d63b7d54d4acc93921470ce37b944080"
+  },
+  "state": "Design fixed before any benchmark fitting or test evaluation"
+}

@@ -1,0 +1,1363 @@
+{
+  "claims": [
+    {
+      "blockers": [
+        "data_grain",
+        "leakage",
+        "timing",
+        "split_integrity",
+        "evaluation_protocol"
+      ],
+      "id": "evaluated_prediction",
+      "requirements": [
+        "data_grain",
+        "missingness",
+        "target_compatibility",
+        "leakage",
+        "timing",
+        "split_integrity",
+        "evaluation_protocol",
+        "reference_baseline"
+      ],
+      "status": "blocked"
+    }
+  ],
+  "estimates": {
+    "accuracy": 0.7605555555555555,
+    "average_precision": 0.5171942319862021,
+    "baseline_accuracy": 0.7322222222222222,
+    "brier": 0.1700888671833284,
+    "calibration": {
+      "bin_counts": [
+        530,
+        538,
+        265,
+        199,
+        97,
+        55,
+        54,
+        34,
+        22,
+        6
+      ],
+      "ece_10bin": 0.05569494562879374,
+      "event_rate": [
+        0.09433962264150944,
+        0.21933085501858737,
+        0.30566037735849055,
+        0.35175879396984927,
+        0.5360824742268041,
+        0.45454545454545453,
+        0.6666666666666666,
+        0.8529411764705882,
+        0.8636363636363636,
+        0.3333333333333333
+      ],
+      "mean_probability": [
+        0.05770095677001608,
+        0.14300836544930012,
+        0.24369695080675974,
+        0.3478202855599923,
+        0.44600908261493954,
+        0.5479548391851541,
+        0.6484086741294556,
+        0.7411944446090241,
+        0.8478430802267397,
+        0.9265717941736442
+      ]
+    },
+    "calibration_detail": {
+      "adequacy_status": "not_assessed",
+      "bins": [
+        {
+          "bin_index": 0,
+          "count": 530,
+          "event_count": 50,
+          "event_rate": 0.09433962264150944,
+          "event_rate_wilson_interval": [
+            0.07229203738880824,
+            0.12222537429759331
+          ],
+          "interval_status": "conditional_binomial_approximation; design not verified",
+          "left_inclusive": true,
+          "lower_bound": 0.0,
+          "mean_probability": 0.0577009567700161,
+          "observed_minus_predicted": 0.036638665871493344,
+          "right_inclusive": true,
+          "status": "computed",
+          "upper_bound": 0.1
+        },
+        {
+          "bin_index": 1,
+          "count": 538,
+          "event_count": 118,
+          "event_rate": 0.21933085501858737,
+          "event_rate_wilson_interval": [
+            0.18642254200908392,
+            0.2562188522886203
+          ],
+          "interval_status": "conditional_binomial_approximation; design not verified",
+          "left_inclusive": false,
+          "lower_bound": 0.1,
+          "mean_probability": 0.14300836544930037,
+          "observed_minus_predicted": 0.076322489569287,
+          "right_inclusive": true,
+          "status": "computed",
+          "upper_bound": 0.2
+        },
+        {
+          "bin_index": 2,
+          "count": 265,
+          "event_count": 81,
+          "event_rate": 0.30566037735849055,
+          "event_rate_wilson_interval": [
+            0.2532985264361971,
+            0.36357604175048785
+          ],
+          "interval_status": "conditional_binomial_approximation; design not verified",
+          "left_inclusive": false,
+          "lower_bound": 0.2,
+          "mean_probability": 0.2436969508067598,
+          "observed_minus_predicted": 0.06196342655173076,
+          "right_inclusive": true,
+          "status": "computed",
+          "upper_bound": 0.30000000000000004
+        },
+        {
+          "bin_index": 3,
+          "count": 199,
+          "event_count": 70,
+          "event_rate": 0.35175879396984927,
+          "event_rate_wilson_interval": [
+            0.2887918818931006,
+            0.42034055906338913
+          ],
+          "interval_status": "conditional_binomial_approximation; design not verified",
+          "left_inclusive": false,
+          "lower_bound": 0.30000000000000004,
+          "mean_probability": 0.34782028555999217,
+          "observed_minus_predicted": 0.0039385084098571,
+          "right_inclusive": true,
+          "status": "computed",
+          "upper_bound": 0.4
+        },
+        {
+          "bin_index": 4,
+          "count": 97,
+          "event_count": 52,
+          "event_rate": 0.5360824742268041,
+          "event_rate_wilson_interval": [
+            0.43736420746636734,
+            0.6320516863719662
+          ],
+          "interval_status": "conditional_binomial_approximation; design not verified",
+          "left_inclusive": false,
+          "lower_bound": 0.4,
+          "mean_probability": 0.4460090826149397,
+          "observed_minus_predicted": 0.0900733916118644,
+          "right_inclusive": true,
+          "status": "computed",
+          "upper_bound": 0.5
+        },
+        {
+          "bin_index": 5,
+          "count": 55,
+          "event_count": 25,
+          "event_rate": 0.45454545454545453,
+          "event_rate_wilson_interval": [
+            0.33025280252016564,
+            0.5847730975813876
+          ],
+          "interval_status": "conditional_binomial_approximation; design not verified",
+          "left_inclusive": false,
+          "lower_bound": 0.5,
+          "mean_probability": 0.5479548391851539,
+          "observed_minus_predicted": -0.09340938463969933,
+          "right_inclusive": true,
+          "status": "computed",
+          "upper_bound": 0.6000000000000001
+        },
+        {
+          "bin_index": 6,
+          "count": 54,
+          "event_count": 36,
+          "event_rate": 0.6666666666666666,
+          "event_rate_wilson_interval": [
+            0.5336096360112935,
+            0.7775858346250742
+          ],
+          "interval_status": "conditional_binomial_approximation; design not verified",
+          "left_inclusive": false,
+          "lower_bound": 0.6000000000000001,
+          "mean_probability": 0.6484086741294556,
+          "observed_minus_predicted": 0.018257992537211054,
+          "right_inclusive": true,
+          "status": "computed",
+          "upper_bound": 0.7000000000000001
+        },
+        {
+          "bin_index": 7,
+          "count": 34,
+          "event_count": 29,
+          "event_rate": 0.8529411764705882,
+          "event_rate_wilson_interval": [
+            0.6987194350454783,
+            0.9355055855521753
+          ],
+          "interval_status": "conditional_binomial_approximation; design not verified",
+          "left_inclusive": false,
+          "lower_bound": 0.7000000000000001,
+          "mean_probability": 0.7411944446090243,
+          "observed_minus_predicted": 0.11174673186156392,
+          "right_inclusive": true,
+          "status": "computed",
+          "upper_bound": 0.8
+        },
+        {
+          "bin_index": 8,
+          "count": 22,
+          "event_count": 19,
+          "event_rate": 0.8636363636363636,
+          "event_rate_wilson_interval": [
+            0.6666501283342828,
+            0.9525099628594474
+          ],
+          "interval_status": "conditional_binomial_approximation; design not verified",
+          "left_inclusive": false,
+          "lower_bound": 0.8,
+          "mean_probability": 0.8478430802267397,
+          "observed_minus_predicted": 0.015793283409623937,
+          "right_inclusive": true,
+          "status": "computed",
+          "upper_bound": 0.9
+        },
+        {
+          "bin_index": 9,
+          "count": 6,
+          "event_count": 2,
+          "event_rate": 0.3333333333333333,
+          "event_rate_wilson_interval": [
+            0.09677141110578041,
+            0.700006684861608
+          ],
+          "interval_status": "conditional_binomial_approximation; design not verified",
+          "left_inclusive": false,
+          "lower_bound": 0.9,
+          "mean_probability": 0.9265717941736442,
+          "observed_minus_predicted": -0.593238460840311,
+          "right_inclusive": true,
+          "status": "computed",
+          "upper_bound": 1.0
+        }
+      ],
+      "boundary_contradiction_count": 0,
+      "brier": 0.1700888671833284,
+      "configuration": {
+        "boundary_rule": "first [0,edge1], subsequent (left,right]; internal equality assigned lower bin, matching sklearn.calibration_curve",
+        "calibration_gap_acceptance_threshold": null,
+        "confidence_level": 0.95,
+        "ece_definition": "sum over nonempty bins of (bin count / all rows) * abs(event rate - mean probability)",
+        "interval_method": "Wilson without continuity correction; pointwise binomial approximation",
+        "interval_sampling_design_verified": false,
+        "log_loss_clip_epsilon": 2.220446049250313e-16,
+        "log_loss_units": "nats per observation",
+        "minimum_bin_count_warning": 20,
+        "minimum_class_count_warning": 20,
+        "n_bins": 10,
+        "other_score_units": "dimensionless",
+        "signed_gap_definition": "sum of bin weights * (event rate - mean probability); equals observed prevalence minus overall mean probability",
+        "small_bin_rationale": "Configured precision/review heuristic, not a universal minimum sample or calibration failure test",
+        "strategy": "uniform"
+      },
+      "diagnostic_computation_status": "computed",
+      "ece": 0.055694945628793645,
+      "empty_bin_count": 0,
+      "event_count": 482,
+      "event_prevalence": 0.2677777777777778,
+      "log_loss": 0.522475736028012,
+      "max_abs_bin_gap": 0.593238460840311,
+      "mean_probability": 0.22174610650478996,
+      "model_selection_performed": false,
+      "nonempty_bin_count": 10,
+      "nonevent_count": 1318,
+      "recalibration_fitted": false,
+      "row_alignment": "positional_only; source row identity cannot be independently verified",
+      "sample_size": 1800,
+      "signed_gap": 0.04603167127298772,
+      "small_nonempty_bin_count": 1,
+      "split_role": "final_holdout",
+      "unclipped_log_loss": 0.5224757360280121
+    },
+    "event_prevalence": 0.2677777777777778,
+    "log_loss": 0.522475736028012,
+    "prevalence_reference_ap": 0.2677777777777778,
+    "queue_capture": 0.24481327800829875,
+    "queue_fraction": 0.1,
+    "roc_auc": 0.7320581920299208,
+    "visual_evidence": {
+      "n": 1800,
+      "panels": [
+        {
+          "axes": {
+            "x": "Column positions (see column labels)",
+            "y": "Row positions (see row labels)"
+          },
+          "comparison": "Rows: observed class positions; columns: supplied predicted class positions; denominator all supplied rows",
+          "data": {
+            "labels": {
+              "columns": [
+                "predicted class 1",
+                "predicted class 2"
+              ],
+              "rows": [
+                "observed class 1",
+                "observed class 2"
+              ]
+            },
+            "values": [
+              [
+                1258,
+                60
+              ],
+              [
+                371,
+                111
+              ]
+            ]
+          },
+          "id": "confusion",
+          "interpretation": "Diagonal cells count correct supplied labels; off-diagonal cells identify observed error types under the supplied policy.",
+          "kind": "matrix",
+          "limitations": [
+            "Computed panels summarize supplied rows; they do not certify assumptions, sampling, untouched evaluation or external validity.",
+            "Aggregates, small cell counts, quantiles and model parameters can still disclose sensitive information; aggregate-only is not anonymization.",
+            "Binning and bounded projections can conceal local structure; no automatic repair or model selection is performed.",
+            "Class positions follow the explicitly supplied order; original class names are withheld. Binary event is class position 2.",
+            "Confusion counts depend on the supplied decision policy and class prevalence; they are not probability calibration.",
+            "Ranking, probability calibration and decision utility are different quantities; a capacity or queue-capture rate is not accuracy.",
+            "No normal-feature assumption, decision threshold selection, recalibration or refitting is performed."
+          ],
+          "n": 1800,
+          "requirement": null,
+          "role": "main_result",
+          "source_split": "final_holdout",
+          "status": "computed",
+          "threshold": null,
+          "title": "Observed versus predicted class counts",
+          "units": "observations (counts)"
+        },
+        {
+          "axes": {
+            "x": "Category positions (see labels)",
+            "y": "observations (counts)"
+          },
+          "comparison": "Count per supplied class position; denominator all supplied rows",
+          "data": {
+            "labels": [
+              "class 1",
+              "class 2"
+            ],
+            "values": [
+              1318.0,
+              482.0
+            ]
+          },
+          "id": "class_prevalence",
+          "interpretation": "Unequal observed counts show prevalence imbalance in this sample, not future prevalence or a model defect by themselves.",
+          "kind": "bars",
+          "limitations": [
+            "Computed panels summarize supplied rows; they do not certify assumptions, sampling, untouched evaluation or external validity.",
+            "Aggregates, small cell counts, quantiles and model parameters can still disclose sensitive information; aggregate-only is not anonymization.",
+            "Binning and bounded projections can conceal local structure; no automatic repair or model selection is performed.",
+            "Class positions follow the explicitly supplied order; original class names are withheld. Binary event is class position 2.",
+            "Confusion counts depend on the supplied decision policy and class prevalence; they are not probability calibration.",
+            "Ranking, probability calibration and decision utility are different quantities; a capacity or queue-capture rate is not accuracy.",
+            "No normal-feature assumption, decision threshold selection, recalibration or refitting is performed."
+          ],
+          "n": 1800,
+          "requirement": null,
+          "role": "descriptive",
+          "source_split": "final_holdout",
+          "status": "computed",
+          "threshold": null,
+          "title": "Observed class counts",
+          "units": "observations (counts)"
+        },
+        {
+          "axes": {
+            "x": "false-positive rate",
+            "y": "true-positive rate"
+          },
+          "comparison": "Actual event-2 ranking rates across native score thresholds; diagonal is descriptive chance-ranking reference",
+          "data": {
+            "x": [
+              0.0,
+              0.005311077389984826,
+              0.009104704097116844,
+              0.015174506828528073,
+              0.0204855842185129,
+              0.03186646433990895,
+              0.04552352048558422,
+              0.05538694992412747,
+              0.06449165402124431,
+              0.07359635811836115,
+              0.08649468892261002,
+              0.10166919575113809,
+              0.11760242792109256,
+              0.13201820940819423,
+              0.1449165402124431,
+              0.15705614567526555,
+              0.16919575113808802,
+              0.18437025796661607,
+              0.19954476479514416,
+              0.21396054628224584,
+              0.2283763277693475,
+              0.24355083459787558,
+              0.2564491654021244,
+              0.26783004552352047,
+              0.2822458270106222,
+              0.29742033383915023,
+              0.3163884673748103,
+              0.3300455235204856,
+              0.34597875569044007,
+              0.3619119878603945,
+              0.38088012139605465,
+              0.3983308042488619,
+              0.4142640364188164,
+              0.4286798179059181,
+              0.44764795144157815,
+              0.4635811836115326,
+              0.4772382397572079,
+              0.4939301972685888,
+              0.5121396054628224,
+              0.5295902883156297,
+              0.5477996965098634,
+              0.5660091047040972,
+              0.5819423368740516,
+              0.5986342943854325,
+              0.6153262518968133,
+              0.6342943854324734,
+              0.6525037936267072,
+              0.6707132018209409,
+              0.6911987860394537,
+              0.7116843702579666,
+              0.7306525037936267,
+              0.7481031866464339,
+              0.7670713201820941,
+              0.787556904400607,
+              0.8057663125948407,
+              0.8247344461305007,
+              0.8437025796661608,
+              0.8634294385432474,
+              0.8823975720789075,
+              0.9021244309559939,
+              0.9226100151745068,
+              0.9385432473444613,
+              0.9590288315629742,
+              0.9787556904400607,
+              1.0
+            ],
+            "y": [
+              0.0,
+              0.043568464730290454,
+              0.0912863070539419,
+              0.13278008298755187,
+              0.17634854771784234,
+              0.2053941908713693,
+              0.22614107883817428,
+              0.2572614107883817,
+              0.29045643153526973,
+              0.3236514522821577,
+              0.34647302904564314,
+              0.3630705394190871,
+              0.3796680497925311,
+              0.3983402489626556,
+              0.4211618257261411,
+              0.4460580912863071,
+              0.470954356846473,
+              0.487551867219917,
+              0.504149377593361,
+              0.5228215767634855,
+              0.5414937759336099,
+              0.5601659751037344,
+              0.58298755186722,
+              0.6099585062240664,
+              0.6286307053941909,
+              0.6452282157676349,
+              0.6514522821576764,
+              0.6721991701244814,
+              0.6887966804979253,
+              0.7033195020746889,
+              0.7095435684647303,
+              0.7199170124481328,
+              0.7344398340248963,
+              0.7531120331950207,
+              0.7593360995850622,
+              0.7738589211618258,
+              0.7946058091286307,
+              0.8091286307053942,
+              0.8174273858921162,
+              0.8278008298755186,
+              0.8360995850622407,
+              0.8443983402489627,
+              0.8589211618257261,
+              0.8713692946058091,
+              0.8858921161825726,
+              0.8921161825726142,
+              0.9004149377593361,
+              0.9087136929460581,
+              0.9107883817427386,
+              0.9128630705394191,
+              0.9190871369294605,
+              0.9294605809128631,
+              0.9356846473029046,
+              0.9398340248962656,
+              0.9481327800829875,
+              0.9543568464730291,
+              0.9605809128630706,
+              0.9647302904564315,
+              0.970954356846473,
+              0.975103734439834,
+              0.979253112033195,
+              0.9937759336099585,
+              0.995850622406639,
+              1.0,
+              1.0
+            ]
+          },
+          "id": "roc",
+          "interpretation": "Rates describe discrimination on these rows; favorable ranking does not establish calibration or useful decisions.",
+          "kind": "curve",
+          "limitations": [
+            "Computed panels summarize supplied rows; they do not certify assumptions, sampling, untouched evaluation or external validity.",
+            "Aggregates, small cell counts, quantiles and model parameters can still disclose sensitive information; aggregate-only is not anonymization.",
+            "Binning and bounded projections can conceal local structure; no automatic repair or model selection is performed.",
+            "Class positions follow the explicitly supplied order; original class names are withheld. Binary event is class position 2.",
+            "Confusion counts depend on the supplied decision policy and class prevalence; they are not probability calibration.",
+            "Ranking, probability calibration and decision utility are different quantities; a capacity or queue-capture rate is not accuracy.",
+            "No normal-feature assumption, decision threshold selection, recalibration or refitting is performed.",
+            "At most 65 actual native curve points are retained by ordered threshold-position quantiles; no interpolation is invented. Displayed segments may omit steps.",
+            "No confidence bands or independent-sampling claim are supplied. Precision-recall depends on event prevalence; the observed prevalence reference is descriptive."
+          ],
+          "n": 1800,
+          "requirement": "discrimination",
+          "role": "main_result",
+          "source_split": "final_holdout",
+          "status": "computed",
+          "threshold": null,
+          "title": "ROC ranking curve",
+          "units": "x: false-positive rate; y: true-positive rate"
+        },
+        {
+          "axes": {
+            "x": "recall",
+            "y": "precision"
+          },
+          "comparison": "Native event-2 recall versus precision; observed event prevalence = 0.267778",
+          "data": {
+            "x": [
+              1.0,
+              1.0,
+              0.995850622406639,
+              0.9937759336099585,
+              0.979253112033195,
+              0.975103734439834,
+              0.970954356846473,
+              0.9647302904564315,
+              0.9605809128630706,
+              0.9543568464730291,
+              0.9481327800829875,
+              0.9398340248962656,
+              0.9356846473029046,
+              0.9294605809128631,
+              0.9190871369294605,
+              0.9128630705394191,
+              0.9107883817427386,
+              0.9087136929460581,
+              0.9004149377593361,
+              0.8921161825726142,
+              0.8858921161825726,
+              0.8713692946058091,
+              0.8589211618257261,
+              0.8443983402489627,
+              0.8360995850622407,
+              0.8278008298755186,
+              0.8174273858921162,
+              0.8091286307053942,
+              0.7946058091286307,
+              0.7738589211618258,
+              0.7593360995850622,
+              0.7531120331950207,
+              0.7344398340248963,
+              0.7199170124481328,
+              0.7095435684647303,
+              0.7033195020746889,
+              0.6887966804979253,
+              0.6721991701244814,
+              0.6514522821576764,
+              0.6452282157676349,
+              0.6286307053941909,
+              0.6099585062240664,
+              0.58298755186722,
+              0.5601659751037344,
+              0.5414937759336099,
+              0.5228215767634855,
+              0.504149377593361,
+              0.487551867219917,
+              0.470954356846473,
+              0.4460580912863071,
+              0.4211618257261411,
+              0.3983402489626556,
+              0.3796680497925311,
+              0.3630705394190871,
+              0.34647302904564314,
+              0.3236514522821577,
+              0.29045643153526973,
+              0.2572614107883817,
+              0.22614107883817428,
+              0.2053941908713693,
+              0.17634854771784234,
+              0.13278008298755187,
+              0.0912863070539419,
+              0.043568464730290454,
+              0.0
+            ],
+            "y": [
+              0.2677777777777778,
+              0.27200902934537247,
+              0.27522935779816515,
+              0.27913752913752915,
+              0.2796208530805687,
+              0.2833031946955998,
+              0.2869405272838749,
+              0.29008109794135994,
+              0.293968253968254,
+              0.297349709114415,
+              0.3008558262014483,
+              0.3038229376257545,
+              0.3084815321477428,
+              0.3124128312412831,
+              0.3150782361308677,
+              0.3193033381712627,
+              0.3251851851851852,
+              0.3313161875945537,
+              0.33539412673879443,
+              0.33965244865718797,
+              0.34491114701130854,
+              0.34739454094292804,
+              0.3505503810330229,
+              0.35299219427580225,
+              0.3582222222222222,
+              0.3637192342752963,
+              0.3685687558465856,
+              0.3746397694524496,
+              0.3784584980237154,
+              0.3790650406504065,
+              0.38284518828451886,
+              0.3911637931034483,
+              0.3933333333333333,
+              0.39793577981651373,
+              0.4052132701421801,
+              0.41544117647058826,
+              0.4213197969543147,
+              0.4268774703557312,
+              0.42954856361149113,
+              0.4423897581792319,
+              0.4488888888888889,
+              0.45440494590417313,
+              0.45395799676898224,
+              0.45685279187817257,
+              0.46441281138790036,
+              0.47191011235955055,
+              0.48023715415019763,
+              0.4916317991631799,
+              0.5044444444444445,
+              0.509478672985782,
+              0.5152284263959391,
+              0.5245901639344263,
+              0.5414201183431953,
+              0.5663430420711975,
+              0.594306049822064,
+              0.616600790513834,
+              0.6222222222222222,
+              0.6294416243654822,
+              0.6449704142011834,
+              0.7021276595744681,
+              0.7589285714285714,
+              0.7619047619047619,
+              0.7857142857142857,
+              0.75,
+              1.0
+            ]
+          },
+          "id": "precision_recall",
+          "interpretation": "Precision concerns event yield among score-selected rows; it is prevalence-sensitive and is not queue capacity or overall accuracy.",
+          "kind": "curve",
+          "limitations": [
+            "Computed panels summarize supplied rows; they do not certify assumptions, sampling, untouched evaluation or external validity.",
+            "Aggregates, small cell counts, quantiles and model parameters can still disclose sensitive information; aggregate-only is not anonymization.",
+            "Binning and bounded projections can conceal local structure; no automatic repair or model selection is performed.",
+            "Class positions follow the explicitly supplied order; original class names are withheld. Binary event is class position 2.",
+            "Confusion counts depend on the supplied decision policy and class prevalence; they are not probability calibration.",
+            "Ranking, probability calibration and decision utility are different quantities; a capacity or queue-capture rate is not accuracy.",
+            "No normal-feature assumption, decision threshold selection, recalibration or refitting is performed.",
+            "At most 65 actual native curve points are retained by ordered threshold-position quantiles; no interpolation is invented. Displayed segments may omit steps.",
+            "No confidence bands or independent-sampling claim are supplied. Precision-recall depends on event prevalence; the observed prevalence reference is descriptive."
+          ],
+          "n": 1800,
+          "requirement": "discrimination",
+          "role": "main_result",
+          "source_split": "final_holdout",
+          "status": "computed",
+          "threshold": null,
+          "title": "Precision-recall ranking curve",
+          "units": "x: recall; y: precision"
+        },
+        {
+          "axes": {
+            "x": "mean event-2 probability",
+            "y": "observed event-2 fraction"
+          },
+          "comparison": "Each nonempty fixed-bin observed fraction versus mean probability; identity is descriptive reference; bin denominators are shown separately",
+          "data": {
+            "x": [
+              0.03685645587624268,
+              0.09462125205666075,
+              0.15477074994652543,
+              0.21639518983620276,
+              0.2811429405203292,
+              0.34259276782298104,
+              0.40229766144462886,
+              0.4717495764115392,
+              0.5328500235512675,
+              0.5944743086354707,
+              0.6569302421311838,
+              0.7272794957179707,
+              0.7791000562055601,
+              0.8379114536005033,
+              0.9016238883939014,
+              0.9544874360439142
+            ],
+            "y": [
+              0.08865248226950355,
+              0.13761467889908258,
+              0.21895424836601307,
+              0.32673267326732675,
+              0.3037037037037037,
+              0.36507936507936506,
+              0.4222222222222222,
+              0.5384615384615384,
+              0.42105263157894735,
+              0.6206896551724138,
+              0.625,
+              0.8518518518518519,
+              0.9090909090909091,
+              0.8,
+              0.7777777777777778,
+              0.0
+            ]
+          },
+          "id": "reliability",
+          "interpretation": "Gaps describe probability disagreement in these bins and rows; discrimination can remain unchanged while probabilities are miscalibrated.",
+          "kind": "curve",
+          "limitations": [
+            "Computed panels summarize supplied rows; they do not certify assumptions, sampling, untouched evaluation or external validity.",
+            "Aggregates, small cell counts, quantiles and model parameters can still disclose sensitive information; aggregate-only is not anonymization.",
+            "Binning and bounded projections can conceal local structure; no automatic repair or model selection is performed.",
+            "Class positions follow the explicitly supplied order; original class names are withheld. Binary event is class position 2.",
+            "Confusion counts depend on the supplied decision policy and class prevalence; they are not probability calibration.",
+            "Ranking, probability calibration and decision utility are different quantities; a capacity or queue-capture rate is not accuracy.",
+            "No normal-feature assumption, decision threshold selection, recalibration or refitting is performed.",
+            "Fixed uniform bins use [0,edge1] then (left,right]; empty bins have no reliability estimate.",
+            "Reliability is descriptive; no adequacy threshold, simultaneous uncertainty band or proof of calibration is supplied. Training summaries are optimistic for generalization."
+          ],
+          "n": 1800,
+          "requirement": "calibration",
+          "role": "diagnostic",
+          "source_split": "final_holdout",
+          "status": "computed",
+          "threshold": null,
+          "title": "Event probability reliability",
+          "units": "x: mean event-2 probability; y: observed event-2 fraction"
+        },
+        {
+          "axes": {
+            "x": "Category positions (see labels)",
+            "y": "observations (counts)"
+          },
+          "comparison": "Equal-width probability bins from zero to one; empty bins explicitly have zero observations",
+          "data": {
+            "labels": [
+              "probability bin 1",
+              "probability bin 2",
+              "probability bin 3",
+              "probability bin 4",
+              "probability bin 5",
+              "probability bin 6",
+              "probability bin 7",
+              "probability bin 8",
+              "probability bin 9",
+              "probability bin 10",
+              "probability bin 11",
+              "probability bin 12",
+              "probability bin 13",
+              "probability bin 14",
+              "probability bin 15",
+              "probability bin 16"
+            ],
+            "values": [
+              282.0,
+              436.0,
+              306.0,
+              202.0,
+              135.0,
+              126.0,
+              90.0,
+              52.0,
+              38.0,
+              29.0,
+              40.0,
+              27.0,
+              11.0,
+              15.0,
+              9.0,
+              2.0
+            ]
+          },
+          "id": "probability_bin_counts",
+          "interpretation": "Small or empty bins limit reliability assessment; counts sum to the complete supplied sample.",
+          "kind": "bars",
+          "limitations": [
+            "Computed panels summarize supplied rows; they do not certify assumptions, sampling, untouched evaluation or external validity.",
+            "Aggregates, small cell counts, quantiles and model parameters can still disclose sensitive information; aggregate-only is not anonymization.",
+            "Binning and bounded projections can conceal local structure; no automatic repair or model selection is performed.",
+            "Class positions follow the explicitly supplied order; original class names are withheld. Binary event is class position 2.",
+            "Confusion counts depend on the supplied decision policy and class prevalence; they are not probability calibration.",
+            "Ranking, probability calibration and decision utility are different quantities; a capacity or queue-capture rate is not accuracy.",
+            "No normal-feature assumption, decision threshold selection, recalibration or refitting is performed.",
+            "Fixed uniform bins use [0,edge1] then (left,right]; empty bins have no reliability estimate.",
+            "Reliability is descriptive; no adequacy threshold, simultaneous uncertainty band or proof of calibration is supplied. Training summaries are optimistic for generalization."
+          ],
+          "n": 1800,
+          "requirement": null,
+          "role": "descriptive",
+          "source_split": "final_holdout",
+          "status": "computed",
+          "threshold": null,
+          "title": "Reliability bin denominators",
+          "units": "observations (counts)"
+        }
+      ],
+      "privacy": "aggregate_only_no_row_pairs",
+      "schema_version": "1.0.0",
+      "source_split": "final_holdout"
+    }
+  },
+  "evidence": [
+    {
+      "diagnostic": "Finite supplied values; no rows dropped or repaired",
+      "limitations": [
+        "Sentinel codes and missingness mechanisms need metadata and manual review."
+      ],
+      "observed": {
+        "group": "all supplied rows",
+        "nonfinite_cells": 0,
+        "nonfinite_fraction": 0.0,
+        "total_cells": 3600,
+        "variables": [
+          "x1",
+          "target"
+        ]
+      },
+      "provenance": {
+        "implementation": "model-evidence/0.2.0",
+        "stage": "supplied_arrays"
+      },
+      "remedies": [
+        "Define missingness handling within training folds; assess selection effects."
+      ],
+      "requirement": "missingness",
+      "sample_size": 1800,
+      "source": "automated",
+      "status": "no_issue_detected",
+      "thresholds": {
+        "configuration_source": "model-evidence/0.2.0 defaults unless supplied argument",
+        "maximum_nonfinite": 0,
+        "rationale": "Any nonfinite supplied value prevents these unmodified numeric adapters; sentinel codes need separate review."
+      }
+    },
+    {
+      "diagnostic": "Requires both binary classes encoded 0/1",
+      "limitations": [
+        "The scientific meaning and measurement of the target require human review."
+      ],
+      "observed": {
+        "class_0_count": 1318,
+        "class_1_count": 482,
+        "finite_count": 1800,
+        "group": "observed classes 0 versus 1",
+        "unique_finite_values": 2,
+        "variables": [
+          "target"
+        ]
+      },
+      "provenance": {
+        "implementation": "model-evidence/0.2.0",
+        "stage": "supplied_arrays"
+      },
+      "remedies": [],
+      "requirement": "target_compatibility",
+      "sample_size": 1800,
+      "source": "automated",
+      "status": "no_issue_detected",
+      "thresholds": {
+        "configuration_source": "model-evidence/0.2.0 defaults unless supplied argument",
+        "rationale": "Target support must match the declared task before computing model-specific quantities.",
+        "support": "both classes 0/1"
+      }
+    },
+    {
+      "diagnostic": "ROC AUC/AP and ranked queue capture",
+      "limitations": [
+        "AP is prevalence-dependent; ROC AUC is ranking, not calibration. Queue capture is recall within a workload budget, not accuracy.",
+        "Queue cutoff was supplied, not optimized on holdout outcomes."
+      ],
+      "observed": {
+        "average_precision": 0.5171942319862021,
+        "event_count": 482,
+        "events_captured": 118,
+        "group": "ranked queue versus all observed events",
+        "prevalence_reference_ap": 0.2677777777777778,
+        "queue_capacity": 180,
+        "queue_capture": 0.24481327800829875,
+        "roc_auc": 0.7320581920299208,
+        "variables": [
+          "predicted probability",
+          "binary target"
+        ]
+      },
+      "provenance": {
+        "implementation": "model-evidence/0.2.0",
+        "stage": "supplied_arrays"
+      },
+      "remedies": [],
+      "requirement": "discrimination",
+      "sample_size": 1800,
+      "source": "automated",
+      "status": "no_issue_detected",
+      "thresholds": {
+        "comparison": "queue capture = events in selected queue / all observed events; no adequacy cutoff",
+        "configuration_source": "model-evidence/0.2.0 defaults unless supplied argument",
+        "queue_fraction_actual": 0.1,
+        "queue_fraction_requested": 0.1,
+        "rationale": "Compare ranked predictions with observed binary outcomes; AUC and AP do not measure causal effects or calibration."
+      }
+    },
+    {
+      "diagnostic": "Supplied prespecified reference compared on identical rows",
+      "limitations": [
+        "Reference must be fit/chosen using training data; comparison is descriptive with no uncertainty estimate."
+      ],
+      "observed": {
+        "difference_model_minus_reference": 0.02833333333333332,
+        "group": "model versus prespecified reference on same evaluation rows",
+        "improves_reference_metric": true,
+        "metric": "accuracy",
+        "model_value": 0.7605555555555555,
+        "reference_value": 0.7322222222222222,
+        "variables": [
+          "observed target",
+          "model prediction",
+          "reference prediction"
+        ]
+      },
+      "provenance": {
+        "implementation": "model-evidence/0.2.0",
+        "stage": "supplied_arrays"
+      },
+      "remedies": [],
+      "requirement": "reference_baseline",
+      "sample_size": 1800,
+      "source": "automated",
+      "status": "no_issue_detected",
+      "thresholds": {
+        "comparison": "model accuracy > reference accuracy",
+        "configuration_source": "model-evidence/0.2.0 defaults unless supplied argument",
+        "rationale": "Compare supplied model and prespecified training-derived reference on identical rows using RMSE or accuracy."
+      }
+    },
+    {
+      "diagnostic": "Fixed uniform-bin event rates with pointwise Wilson intervals; Descriptive calibration summaries on caller-declared final_holdout rows; no adequacy cutoff was evaluated.",
+      "limitations": [
+        "Uniform-bin calibration and ECE depend on the chosen bins and sample; no universal adequacy cutoff or calibration proof is supplied.",
+        "Empty bins are explicitly unassessed: no calibration conclusion is supported for probability regions without supplied observations. Small event/non-event counts limit reliability review.",
+        "Wilson intervals concern each bin's event proportion under a binomial approximation. They assume independent Bernoulli observations within a bin and are not simultaneous bands, prediction intervals or uncertainty for the bin mean probability.",
+        "Do not treat mean predicted probability falling inside an interval as a passed calibration test; model fitting, selection and repeated inspection are not accounted for.",
+        "A declared split role and matching row indexes do not verify training/selection history, independence, measurement quality or external validity.",
+        "Observed prevalence is a description of these rows, not a prespecified training-derived probability baseline. Calibration is distinct from ranking discrimination.",
+        "No recalibration or correction is fitted. Any probability calibration must be learned using separate training/validation or cross-fitting, never these final evaluation outcomes.",
+        "Descriptive calibration summaries on caller-declared final_holdout rows; no adequacy cutoff was evaluated."
+      ],
+      "observed": {
+        "bins": [
+          {
+            "bin_index": 0,
+            "count": 530,
+            "event_count": 50,
+            "event_rate": 0.09433962264150944,
+            "event_rate_wilson_interval": [
+              0.07229203738880824,
+              0.12222537429759331
+            ],
+            "interval_status": "conditional_binomial_approximation; design not verified",
+            "left_inclusive": true,
+            "lower_bound": 0.0,
+            "mean_probability": 0.0577009567700161,
+            "observed_minus_predicted": 0.036638665871493344,
+            "right_inclusive": true,
+            "status": "computed",
+            "upper_bound": 0.1
+          },
+          {
+            "bin_index": 1,
+            "count": 538,
+            "event_count": 118,
+            "event_rate": 0.21933085501858737,
+            "event_rate_wilson_interval": [
+              0.18642254200908392,
+              0.2562188522886203
+            ],
+            "interval_status": "conditional_binomial_approximation; design not verified",
+            "left_inclusive": false,
+            "lower_bound": 0.1,
+            "mean_probability": 0.14300836544930037,
+            "observed_minus_predicted": 0.076322489569287,
+            "right_inclusive": true,
+            "status": "computed",
+            "upper_bound": 0.2
+          },
+          {
+            "bin_index": 2,
+            "count": 265,
+            "event_count": 81,
+            "event_rate": 0.30566037735849055,
+            "event_rate_wilson_interval": [
+              0.2532985264361971,
+              0.36357604175048785
+            ],
+            "interval_status": "conditional_binomial_approximation; design not verified",
+            "left_inclusive": false,
+            "lower_bound": 0.2,
+            "mean_probability": 0.2436969508067598,
+            "observed_minus_predicted": 0.06196342655173076,
+            "right_inclusive": true,
+            "status": "computed",
+            "upper_bound": 0.30000000000000004
+          },
+          {
+            "bin_index": 3,
+            "count": 199,
+            "event_count": 70,
+            "event_rate": 0.35175879396984927,
+            "event_rate_wilson_interval": [
+              0.2887918818931006,
+              0.42034055906338913
+            ],
+            "interval_status": "conditional_binomial_approximation; design not verified",
+            "left_inclusive": false,
+            "lower_bound": 0.30000000000000004,
+            "mean_probability": 0.34782028555999217,
+            "observed_minus_predicted": 0.0039385084098571,
+            "right_inclusive": true,
+            "status": "computed",
+            "upper_bound": 0.4
+          },
+          {
+            "bin_index": 4,
+            "count": 97,
+            "event_count": 52,
+            "event_rate": 0.5360824742268041,
+            "event_rate_wilson_interval": [
+              0.43736420746636734,
+              0.6320516863719662
+            ],
+            "interval_status": "conditional_binomial_approximation; design not verified",
+            "left_inclusive": false,
+            "lower_bound": 0.4,
+            "mean_probability": 0.4460090826149397,
+            "observed_minus_predicted": 0.0900733916118644,
+            "right_inclusive": true,
+            "status": "computed",
+            "upper_bound": 0.5
+          },
+          {
+            "bin_index": 5,
+            "count": 55,
+            "event_count": 25,
+            "event_rate": 0.45454545454545453,
+            "event_rate_wilson_interval": [
+              0.33025280252016564,
+              0.5847730975813876
+            ],
+            "interval_status": "conditional_binomial_approximation; design not verified",
+            "left_inclusive": false,
+            "lower_bound": 0.5,
+            "mean_probability": 0.5479548391851539,
+            "observed_minus_predicted": -0.09340938463969933,
+            "right_inclusive": true,
+            "status": "computed",
+            "upper_bound": 0.6000000000000001
+          },
+          {
+            "bin_index": 6,
+            "count": 54,
+            "event_count": 36,
+            "event_rate": 0.6666666666666666,
+            "event_rate_wilson_interval": [
+              0.5336096360112935,
+              0.7775858346250742
+            ],
+            "interval_status": "conditional_binomial_approximation; design not verified",
+            "left_inclusive": false,
+            "lower_bound": 0.6000000000000001,
+            "mean_probability": 0.6484086741294556,
+            "observed_minus_predicted": 0.018257992537211054,
+            "right_inclusive": true,
+            "status": "computed",
+            "upper_bound": 0.7000000000000001
+          },
+          {
+            "bin_index": 7,
+            "count": 34,
+            "event_count": 29,
+            "event_rate": 0.8529411764705882,
+            "event_rate_wilson_interval": [
+              0.6987194350454783,
+              0.9355055855521753
+            ],
+            "interval_status": "conditional_binomial_approximation; design not verified",
+            "left_inclusive": false,
+            "lower_bound": 0.7000000000000001,
+            "mean_probability": 0.7411944446090243,
+            "observed_minus_predicted": 0.11174673186156392,
+            "right_inclusive": true,
+            "status": "computed",
+            "upper_bound": 0.8
+          },
+          {
+            "bin_index": 8,
+            "count": 22,
+            "event_count": 19,
+            "event_rate": 0.8636363636363636,
+            "event_rate_wilson_interval": [
+              0.6666501283342828,
+              0.9525099628594474
+            ],
+            "interval_status": "conditional_binomial_approximation; design not verified",
+            "left_inclusive": false,
+            "lower_bound": 0.8,
+            "mean_probability": 0.8478430802267397,
+            "observed_minus_predicted": 0.015793283409623937,
+            "right_inclusive": true,
+            "status": "computed",
+            "upper_bound": 0.9
+          },
+          {
+            "bin_index": 9,
+            "count": 6,
+            "event_count": 2,
+            "event_rate": 0.3333333333333333,
+            "event_rate_wilson_interval": [
+              0.09677141110578041,
+              0.700006684861608
+            ],
+            "interval_status": "conditional_binomial_approximation; design not verified",
+            "left_inclusive": false,
+            "lower_bound": 0.9,
+            "mean_probability": 0.9265717941736442,
+            "observed_minus_predicted": -0.593238460840311,
+            "right_inclusive": true,
+            "status": "computed",
+            "upper_bound": 1.0
+          }
+        ],
+        "boundary_contradiction_count": 0,
+        "brier": 0.1700888671833284,
+        "comparison": "observed event fraction versus mean probability in each bin; observed minus predicted uses the same bin denominator",
+        "ece": 0.055694945628793645,
+        "empty_bin_count": 0,
+        "event_count": 482,
+        "event_prevalence": 0.2677777777777778,
+        "group": "binary outcomes versus event-1 probabilities, grouped by fixed uniform bins",
+        "log_loss": 0.522475736028012,
+        "max_abs_bin_gap": 0.593238460840311,
+        "mean_probability": 0.22174610650478996,
+        "nonevent_count": 1318,
+        "sample_size": 1800,
+        "signed_gap": 0.04603167127298772,
+        "small_nonempty_bin_count": 1,
+        "source_split": "final_holdout",
+        "variables": [
+          "observed target coded 0/1",
+          "event-1 probability"
+        ]
+      },
+      "provenance": {
+        "diagnostic": "binary-calibration/0.3.0",
+        "implementation": "model-evidence/0.7.0",
+        "source_split": "final_holdout"
+      },
+      "remedies": [
+        "Review actual bin counts/gaps and uncertainty with domain decision costs. If a revised model or calibration is justified, fit it using training/calibration data and rerun on a fresh evaluation; do not tune against final outcomes."
+      ],
+      "requirement": "calibration",
+      "sample_size": 1800,
+      "source": "automated",
+      "status": "warning",
+      "thresholds": {
+        "boundary_rule": "first [0,edge1], subsequent (left,right]; internal equality assigned lower bin, matching sklearn.calibration_curve",
+        "calibration_gap_acceptance_threshold": null,
+        "confidence_level": 0.95,
+        "ece_definition": "sum over nonempty bins of (bin count / all rows) * abs(event rate - mean probability)",
+        "interval_method": "Wilson without continuity correction; pointwise binomial approximation",
+        "interval_sampling_design_verified": false,
+        "log_loss_clip_epsilon": 2.220446049250313e-16,
+        "log_loss_units": "nats per observation",
+        "minimum_bin_count_warning": 20,
+        "minimum_class_count_warning": 20,
+        "n_bins": 10,
+        "other_score_units": "dimensionless",
+        "signed_gap_definition": "sum of bin weights * (event rate - mean probability); equals observed prevalence minus overall mean probability",
+        "small_bin_rationale": "Configured precision/review heuristic, not a universal minimum sample or calibration failure test",
+        "strategy": "uniform"
+      }
+    },
+    {
+      "diagnostic": "Requires metadata, study documentation, or an unimplemented diagnostic",
+      "limitations": [
+        "Cannot be determined from fit alone."
+      ],
+      "observed": {},
+      "provenance": {
+        "implementation": "model-evidence/0.7.0"
+      },
+      "remedies": [
+        "Document the unit, aggregation rules and sampling frame before interpretation."
+      ],
+      "requirement": "data_grain",
+      "sample_size": null,
+      "source": "manual_required",
+      "status": "not_checked",
+      "thresholds": {}
+    },
+    {
+      "diagnostic": "Requires metadata, study documentation, or an unimplemented diagnostic",
+      "limitations": [
+        "Cannot be determined from fit alone."
+      ],
+      "observed": {},
+      "provenance": {
+        "implementation": "model-evidence/0.7.0"
+      },
+      "remedies": [
+        "Freeze the protocol using training-only selection and retain a final untouched evaluation set."
+      ],
+      "requirement": "evaluation_protocol",
+      "sample_size": null,
+      "source": "manual_required",
+      "status": "not_checked",
+      "thresholds": {}
+    },
+    {
+      "diagnostic": "Requires metadata, study documentation, or an unimplemented diagnostic",
+      "limitations": [
+        "Cannot be determined from fit alone."
+      ],
+      "observed": {},
+      "provenance": {
+        "implementation": "model-evidence/0.7.0"
+      },
+      "remedies": [
+        "Collect sufficient event and non-event information and review sparsity and effective complexity."
+      ],
+      "requirement": "event_information",
+      "sample_size": null,
+      "source": "manual_required",
+      "status": "not_checked",
+      "thresholds": {}
+    },
+    {
+      "diagnostic": "Requires metadata, study documentation, or an unimplemented diagnostic",
+      "limitations": [
+        "Cannot be determined from fit alone."
+      ],
+      "observed": {},
+      "provenance": {
+        "implementation": "model-evidence/0.7.0"
+      },
+      "remedies": [
+        "Audit lineage and keep preprocessing and model selection inside training data."
+      ],
+      "requirement": "leakage",
+      "sample_size": null,
+      "source": "manual_required",
+      "status": "not_checked",
+      "thresholds": {}
+    },
+    {
+      "diagnostic": "Requires metadata, study documentation, or an unimplemented diagnostic",
+      "limitations": [
+        "Cannot be determined from fit alone."
+      ],
+      "observed": {},
+      "provenance": {
+        "implementation": "model-evidence/0.7.0"
+      },
+      "remedies": [
+        "Use group-aware or forward-time splits appropriate to the intended deployment."
+      ],
+      "requirement": "split_integrity",
+      "sample_size": null,
+      "source": "manual_required",
+      "status": "not_checked",
+      "thresholds": {}
+    },
+    {
+      "diagnostic": "Requires metadata, study documentation, or an unimplemented diagnostic",
+      "limitations": [
+        "Cannot be determined from fit alone."
+      ],
+      "observed": {},
+      "provenance": {
+        "implementation": "model-evidence/0.7.0"
+      },
+      "remedies": [
+        "Provide availability timestamps and respect label windows and look-ahead restrictions."
+      ],
+      "requirement": "timing",
+      "sample_size": null,
+      "source": "manual_required",
+      "status": "not_checked",
+      "thresholds": {}
+    }
+  ],
+  "library_version": "0.7.0",
+  "limitations": [
+    "Metrics describe only supplied evaluation rows; provenance of held-out status needs human evidence. No holdout-driven repair or model selection is performed.",
+    "Permutation importance measures predictive reliance in an evaluation distribution, not causality; this release does not compute it.",
+    "Only binary 0/1 targets are executable. Probability and ranking metrics need supplied probabilities.",
+    "Queue capture at a capacity fraction is recall among ranked events, not overall accuracy. AP is prevalence-sensitive.",
+    "Held-out metrics do not establish calibrated probabilities, clinical utility, fairness or causal benefit.",
+    "Diagnostics can reveal specific problems; absence of detected problems is not proof that assumptions hold. Fit does not establish causality or external validity.",
+    "Diagnostics can detect some problems; no_issue_detected and nonsignificant tests do not prove assumptions.",
+    "Fit does not establish causality, external validity, or performance in another population.",
+    "Reports are editable data, not signed attestations; verify provenance. Aggregates can still be sensitive."
+  ],
+  "method": "prediction_classification",
+  "purpose": "prediction",
+  "registry_version": "0.7.0",
+  "sample_sizes": {
+    "n": 1800
+  },
+  "schema_version": "1.1.0"
+}

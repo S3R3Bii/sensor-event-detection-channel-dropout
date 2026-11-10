@@ -1,0 +1,38 @@
+{
+  "scope": "Historical original benchmark checks, prior to the publication extension. The publication does not retrain or alter the original experiment.",
+  "frozen_source_checks": 7,
+  "project_tests_passed": 10,
+  "cpu_seeded_cnn_fits": 3,
+  "separate_shuffle_control_fits": 1,
+  "saved_score_check": {
+    "model_scenario_metric_rows": 9,
+    "prediction_rows": 16200,
+    "test_windows": 1800,
+    "null_rows": 600,
+    "independent_scope": "Point metrics and contrasts; bootstrap interval endpoints were reproduced but not independently recomputed."
+  },
+  "historical_byte_identical_rerun": {
+    "frozen_design.json": "031603f63b6328c0dc15f18bfde67cb4437471f18299276c4ab611b2f65089b7",
+    "environment.json": "95a967ccaefda0f655e42e391d0e59f7a1bd9af83598222b5dfd68b5c82e82e4",
+    "split_manifest.json": "92f33504e7a564cdbb8e2ea485cd54bf08f64af7c5dd4c901ac6cf10aaa39384",
+    "validation_frozen.json": "cca51b38c81fc8ba3894bcd32e519f12748d1e755b4125e38e3fcb8ba60605ab",
+    "test_predictions.csv": "b75cbf74f1423f11bc471a3db52bb7e0a6c120b1b92e88aa22008e5e07bcddf8",
+    "metrics.csv": "9d9c7528f6a127c9024fb3fee0ba8c1a62c720f43e595b151e12e6f2c415af6b",
+    "results.json": "960dbf6c82e0b2f98e99992cefde2adde28462057d4dd086bbcf93d41e52424b",
+    "null_predictions.csv": "1bead64bd497ee891e2929dab5f47d2200829c4afc760233955c2280345364a6",
+    "risk_coverage.csv": "2779519ef316a97f26469db96d4860853dff1e9d61815897002fb10598e9d994",
+    "model_comparison.png": "04c90150f1fb48eb460973a121874513023cf6872e83e7cdc386ddea0fb3a22d",
+    "policy_and_calibration.png": "3953d203a53308d2e7db6c10f2db8c60a562c344425e7e357044bed53203f941"
+  },
+  "historical_dependency_audit_reproduced": {
+    "cnn_brief.json": "054d9f0c1ee7d51c6058b24ddb40eb9c886809c9a658702a06fe24eecbb4452a",
+    "cnn_clean.json": "b72fd34880243993353b577c033c65cdc7d912765019face0b29d499abb1ef31",
+    "cnn_sustained.json": "315e4ee17c18352d4350783507ad18e94d04f0702924bfbd214f7ed9c3077399",
+    "logistic_brief.json": "01b395054036d7bbb2dcbd09c5bb9db9eea752949702a77afbc71c162b68fa90",
+    "logistic_clean.json": "1944a9b37b4f2d45493fd2e399c8bf42c7bbf5667ec50192e39649f4c0e8ff8e",
+    "logistic_sustained.json": "186edff339f595d8720b197c79bffb615e59cbc928cf7a2aee9bfc7de0065926",
+    "prevalence_brief.json": "f59a9038df0b7a80b2f72fd0c4ceda8d0271b1ab4387c83c514fe244522d1e0a",
+    "prevalence_clean.json": "f59a9038df0b7a80b2f72fd0c4ceda8d0271b1ab4387c83c514fe244522d1e0a",
+    "prevalence_sustained.json": "f59a9038df0b7a80b2f72fd0c4ceda8d0271b1ab4387c83c514fe244522d1e0a"
+  }
+}

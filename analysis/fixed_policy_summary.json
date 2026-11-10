@@ -1,0 +1,73 @@
+{
+  "scope": "Post-hoc description of saved held-out scores and the unchanged frozen policy. No new threshold selection, training, field outcomes, or human review outcomes.",
+  "inputs_sha256": {
+    "test_predictions.csv": "b75cbf74f1423f11bc471a3db52bb7e0a6c120b1b92e88aa22008e5e07bcddf8",
+    "results.json": "960dbf6c82e0b2f98e99992cefde2adde28462057d4dd086bbcf93d41e52424b",
+    "validation_frozen.json": "cca51b38c81fc8ba3894bcd32e519f12748d1e755b4125e38e3fcb8ba60605ab"
+  },
+  "cases": {
+    "clean": {
+      "windows": 1800,
+      "events": 482,
+      "issued_correct": 1405,
+      "issued_wrong": 175,
+      "deferred_correct_if_issued": 129,
+      "deferred_wrong_if_issued": 91,
+      "issued_false_negatives": 162,
+      "issued_false_positives": 13,
+      "deferred_false_negatives_if_issued": 65,
+      "deferred_false_positives_if_issued": 26,
+      "deferred": 220,
+      "all_issued_wrong": 266,
+      "coverage": 0.8777777777777778,
+      "error_if_all_issued": 0.14777777777777779,
+      "error_among_issued": 0.11075949367088607,
+      "break_even_cost_per_deferral": 0.41363636363636364,
+      "break_even_exact": "91/220",
+      "cost_at_original_weight": 0.11922222222222222,
+      "deferrals_per_1000_windows_if_all_this_scenario": 122.22222222222223
+    },
+    "brief": {
+      "windows": 1800,
+      "events": 482,
+      "issued_correct": 1330,
+      "issued_wrong": 236,
+      "deferred_correct_if_issued": 114,
+      "deferred_wrong_if_issued": 120,
+      "issued_false_negatives": 218,
+      "issued_false_positives": 18,
+      "deferred_false_negatives_if_issued": 89,
+      "deferred_false_positives_if_issued": 31,
+      "deferred": 234,
+      "all_issued_wrong": 356,
+      "coverage": 0.87,
+      "error_if_all_issued": 0.19777777777777777,
+      "error_among_issued": 0.15070242656449553,
+      "break_even_cost_per_deferral": 0.5128205128205128,
+      "break_even_exact": "20/39",
+      "cost_at_original_weight": 0.15451111111111113,
+      "deferrals_per_1000_windows_if_all_this_scenario": 130.0
+    },
+    "sustained": {
+      "windows": 1800,
+      "events": 482,
+      "issued_correct": 1164,
+      "issued_wrong": 274,
+      "deferred_correct_if_issued": 205,
+      "deferred_wrong_if_issued": 157,
+      "issued_false_negatives": 260,
+      "issued_false_positives": 14,
+      "deferred_false_negatives_if_issued": 111,
+      "deferred_false_positives_if_issued": 46,
+      "deferred": 362,
+      "all_issued_wrong": 431,
+      "coverage": 0.7988888888888889,
+      "error_if_all_issued": 0.23944444444444443,
+      "error_among_issued": 0.1905424200278164,
+      "break_even_cost_per_deferral": 0.43370165745856354,
+      "break_even_exact": "157/362",
+      "cost_at_original_weight": 0.1884222222222222,
+      "deferrals_per_1000_windows_if_all_this_scenario": 201.11111111111111
+    }
+  }
+}

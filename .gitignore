@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.venv/
+rerun/
+*.aux
+*.blg
+*.log
+*.out
+*.toc
+*.synctex.gz

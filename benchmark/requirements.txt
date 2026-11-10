@@ -1,0 +1,8 @@
+# Use the CPU build of PyTorch on a host where this exact version is available.
+torch==2.7.1+cpu
+numpy==2.2.5
+scipy==1.15.3
+scikit-learn==1.7.0
+matplotlib==3.10.9
+pandas==2.3.3
+threadpoolctl==3.6.0

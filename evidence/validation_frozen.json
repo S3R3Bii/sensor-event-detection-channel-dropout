@@ -1,0 +1,434 @@
+{
+  "final_test_generated": false,
+  "mean_cost_by_model": {
+    "cnn": 0.14044444444444446,
+    "logistic": 0.21519444444444447,
+    "prevalence": 0.26805555555555555
+  },
+  "seeds": [
+    {
+      "calibration": {
+        "cnn": {
+          "intercept": 0.5635470886154521,
+          "slope": 1.2204478113619281,
+          "source_fingerprint": "2b673c708fa8eaf427a80575bf454b84ff8e6442851ae79c37d248121315aac6"
+        },
+        "logistic": {
+          "intercept": -0.09947042328947586,
+          "slope": 1.1445534257805612,
+          "source_fingerprint": "2b673c708fa8eaf427a80575bf454b84ff8e6442851ae79c37d248121315aac6"
+        },
+        "prevalence": {
+          "intercept": 0.0,
+          "slope": 1.0,
+          "source_fingerprint": "training prevalence unchanged"
+        }
+      },
+      "cnn_loss_by_epoch": [
+        0.5920134350105568,
+        0.5673447137997474,
+        0.5541459401448567,
+        0.516205711055685,
+        0.474790389891024,
+        0.4516989773438301,
+        0.435727795995312,
+        0.42693479443773813,
+        0.4126057270868325,
+        0.4011826409233941,
+        0.3924573316250318,
+        0.3809155335396896,
+        0.3697512286680716,
+        0.36323732093528466
+      ],
+      "policies": {
+        "cnn": {
+          "scenarios": {
+            "brief": {
+              "coverage": 0.8458333333333333,
+              "decision_cost": 0.16941666666666666,
+              "errors_retained": 34,
+              "retained": 203,
+              "risk": 0.16748768472906403,
+              "windows": 240
+            },
+            "clean": {
+              "coverage": 0.85,
+              "decision_cost": 0.10616666666666667,
+              "errors_retained": 19,
+              "retained": 204,
+              "risk": 0.09313725490196079,
+              "windows": 240
+            },
+            "sustained": {
+              "coverage": 0.7708333333333334,
+              "decision_cost": 0.19125,
+              "errors_retained": 36,
+              "retained": 185,
+              "risk": 0.1945945945945946,
+              "windows": 240
+            }
+          },
+          "source_fingerprint": "e064583b662d29b2545971da516fc52bd9deeef63b16b45f86ff590ab21ea45c",
+          "threshold": 0.7,
+          "validation_cost": 0.15561111111111112
+        },
+        "logistic": {
+          "scenarios": {
+            "brief": {
+              "coverage": 0.7166666666666667,
+              "decision_cost": 0.19683333333333333,
+              "errors_retained": 35,
+              "retained": 172,
+              "risk": 0.20348837209302326,
+              "windows": 240
+            },
+            "clean": {
+              "coverage": 0.7541666666666667,
+              "decision_cost": 0.20675,
+              "errors_retained": 39,
+              "retained": 181,
+              "risk": 0.2154696132596685,
+              "windows": 240
+            },
+            "sustained": {
+              "coverage": 0.7083333333333334,
+              "decision_cost": 0.23166666666666666,
+              "errors_retained": 43,
+              "retained": 170,
+              "risk": 0.2529411764705882,
+              "windows": 240
+            }
+          },
+          "source_fingerprint": "e064583b662d29b2545971da516fc52bd9deeef63b16b45f86ff590ab21ea45c",
+          "threshold": 0.75,
+          "validation_cost": 0.21175
+        },
+        "prevalence": {
+          "scenarios": {
+            "brief": {
+              "coverage": 1.0,
+              "decision_cost": 0.30833333333333335,
+              "errors_retained": 74,
+              "retained": 240,
+              "risk": 0.30833333333333335,
+              "windows": 240
+            },
+            "clean": {
+              "coverage": 1.0,
+              "decision_cost": 0.30833333333333335,
+              "errors_retained": 74,
+              "retained": 240,
+              "risk": 0.30833333333333335,
+              "windows": 240
+            },
+            "sustained": {
+              "coverage": 1.0,
+              "decision_cost": 0.30833333333333335,
+              "errors_retained": 74,
+              "retained": 240,
+              "risk": 0.30833333333333335,
+              "windows": 240
+            }
+          },
+          "source_fingerprint": "e064583b662d29b2545971da516fc52bd9deeef63b16b45f86ff590ab21ea45c",
+          "threshold": 0.5,
+          "validation_cost": 0.30833333333333335
+        }
+      },
+      "scale_means": [
+        0.027987291288688196,
+        0.037675944193640856
+      ],
+      "scale_standard_deviations": [
+        0.4483925679213937,
+        0.44426398921476873
+      ],
+      "scaler_source_fingerprint": "fdef822a96fad85bffc8b161fed8dccd5e30af23489ca40e4a009f894c1fb817",
+      "seed": 101,
+      "training_prior": 0.2564814814814815
+    },
+    {
+      "calibration": {
+        "cnn": {
+          "intercept": 0.19640160534202528,
+          "slope": 0.8980367168396187,
+          "source_fingerprint": "e24b6b384d6f53e7e0d8c4e70869eea533545d9e9f3b27e3c30ebca3cb531a56"
+        },
+        "logistic": {
+          "intercept": -0.6720343579429944,
+          "slope": 0.4581957755556182,
+          "source_fingerprint": "e24b6b384d6f53e7e0d8c4e70869eea533545d9e9f3b27e3c30ebca3cb531a56"
+        },
+        "prevalence": {
+          "intercept": 0.0,
+          "slope": 1.0,
+          "source_fingerprint": "training prevalence unchanged"
+        }
+      },
+      "cnn_loss_by_epoch": [
+        0.6059833482459739,
+        0.5733254899213344,
+        0.5690867562352875,
+        0.5672284935727532,
+        0.5484685132532944,
+        0.5104727862057863,
+        0.47222707830829386,
+        0.44548859544742253,
+        0.43006359978958414,
+        0.41646676188633763,
+        0.40798239163410516,
+        0.3989578940250255,
+        0.3937857575622606,
+        0.3899303999212053
+      ],
+      "policies": {
+        "cnn": {
+          "scenarios": {
+            "brief": {
+              "coverage": 0.8958333333333334,
+              "decision_cost": 0.13958333333333334,
+              "errors_retained": 29,
+              "retained": 215,
+              "risk": 0.13488372093023257,
+              "windows": 240
+            },
+            "clean": {
+              "coverage": 0.9,
+              "decision_cost": 0.09716666666666667,
+              "errors_retained": 19,
+              "retained": 216,
+              "risk": 0.08796296296296297,
+              "windows": 240
+            },
+            "sustained": {
+              "coverage": 0.8208333333333333,
+              "decision_cost": 0.16141666666666668,
+              "errors_retained": 31,
+              "retained": 197,
+              "risk": 0.15736040609137056,
+              "windows": 240
+            }
+          },
+          "source_fingerprint": "3944409d51ac57a89bdc72f70e409c04cb59a6848f7aabe7dbf8eab2994ad20b",
+          "threshold": 0.65,
+          "validation_cost": 0.1327222222222222
+        },
+        "logistic": {
+          "scenarios": {
+            "brief": {
+              "coverage": 0.8958333333333334,
+              "decision_cost": 0.19791666666666666,
+              "errors_retained": 43,
+              "retained": 215,
+              "risk": 0.2,
+              "windows": 240
+            },
+            "clean": {
+              "coverage": 0.8791666666666667,
+              "decision_cost": 0.18008333333333332,
+              "errors_retained": 38,
+              "retained": 211,
+              "risk": 0.18009478672985782,
+              "windows": 240
+            },
+            "sustained": {
+              "coverage": 0.8375,
+              "decision_cost": 0.21258333333333332,
+              "errors_retained": 44,
+              "retained": 201,
+              "risk": 0.21890547263681592,
+              "windows": 240
+            }
+          },
+          "source_fingerprint": "3944409d51ac57a89bdc72f70e409c04cb59a6848f7aabe7dbf8eab2994ad20b",
+          "threshold": 0.7,
+          "validation_cost": 0.19686111111111113
+        },
+        "prevalence": {
+          "scenarios": {
+            "brief": {
+              "coverage": 1.0,
+              "decision_cost": 0.2375,
+              "errors_retained": 57,
+              "retained": 240,
+              "risk": 0.2375,
+              "windows": 240
+            },
+            "clean": {
+              "coverage": 1.0,
+              "decision_cost": 0.2375,
+              "errors_retained": 57,
+              "retained": 240,
+              "risk": 0.2375,
+              "windows": 240
+            },
+            "sustained": {
+              "coverage": 1.0,
+              "decision_cost": 0.2375,
+              "errors_retained": 57,
+              "retained": 240,
+              "risk": 0.2375,
+              "windows": 240
+            }
+          },
+          "source_fingerprint": "3944409d51ac57a89bdc72f70e409c04cb59a6848f7aabe7dbf8eab2994ad20b",
+          "threshold": 0.5,
+          "validation_cost": 0.23749999999999996
+        }
+      },
+      "scale_means": [
+        -0.0989291275033315,
+        -0.02906821997964897
+      ],
+      "scale_standard_deviations": [
+        0.4670813971829128,
+        0.45559966682632563
+      ],
+      "scaler_source_fingerprint": "22da4817efcd4d7db075f1bdfce794d6abc61f5d5ce3c3d5947a85552e7c621d",
+      "seed": 203,
+      "training_prior": 0.262037037037037
+    },
+    {
+      "calibration": {
+        "cnn": {
+          "intercept": -0.4353766137055424,
+          "slope": 0.8847690191585385,
+          "source_fingerprint": "840de1a2f5dc9ef769720bb241ad2f8e74db9edd3ad98d088c661df69da57c7e"
+        },
+        "logistic": {
+          "intercept": -0.5736090185380488,
+          "slope": 0.899059956820715,
+          "source_fingerprint": "840de1a2f5dc9ef769720bb241ad2f8e74db9edd3ad98d088c661df69da57c7e"
+        },
+        "prevalence": {
+          "intercept": 0.0,
+          "slope": 1.0,
+          "source_fingerprint": "training prevalence unchanged"
+        }
+      },
+      "cnn_loss_by_epoch": [
+        0.5932735434284917,
+        0.5813222175762978,
+        0.5782934361033969,
+        0.5686344510243263,
+        0.5192240397871276,
+        0.455689388807909,
+        0.4166665503272304,
+        0.4132720951680784,
+        0.3877787213266632,
+        0.3787400579010999,
+        0.36856193689652433,
+        0.37821981730284515,
+        0.35967784807269954,
+        0.3503729390509335
+      ],
+      "policies": {
+        "cnn": {
+          "scenarios": {
+            "brief": {
+              "coverage": 0.8208333333333333,
+              "decision_cost": 0.12808333333333333,
+              "errors_retained": 23,
+              "retained": 197,
+              "risk": 0.116751269035533,
+              "windows": 240
+            },
+            "clean": {
+              "coverage": 0.8458333333333333,
+              "decision_cost": 0.09025,
+              "errors_retained": 15,
+              "retained": 203,
+              "risk": 0.07389162561576355,
+              "windows": 240
+            },
+            "sustained": {
+              "coverage": 0.7833333333333333,
+              "decision_cost": 0.18066666666666667,
+              "errors_retained": 34,
+              "retained": 188,
+              "risk": 0.18085106382978725,
+              "windows": 240
+            }
+          },
+          "source_fingerprint": "ce975c127c43810ecd1ac7fe7904027e695f872de7421be52d349faaea88737d",
+          "threshold": 0.7,
+          "validation_cost": 0.133
+        },
+        "logistic": {
+          "scenarios": {
+            "brief": {
+              "coverage": 0.875,
+              "decision_cost": 0.23083333333333333,
+              "errors_retained": 50,
+              "retained": 210,
+              "risk": 0.23809523809523808,
+              "windows": 240
+            },
+            "clean": {
+              "coverage": 0.8708333333333333,
+              "decision_cost": 0.21908333333333332,
+              "errors_retained": 47,
+              "retained": 209,
+              "risk": 0.22488038277511962,
+              "windows": 240
+            },
+            "sustained": {
+              "coverage": 0.8,
+              "decision_cost": 0.261,
+              "errors_retained": 54,
+              "retained": 192,
+              "risk": 0.28125,
+              "windows": 240
+            }
+          },
+          "source_fingerprint": "ce975c127c43810ecd1ac7fe7904027e695f872de7421be52d349faaea88737d",
+          "threshold": 0.7,
+          "validation_cost": 0.23697222222222222
+        },
+        "prevalence": {
+          "scenarios": {
+            "brief": {
+              "coverage": 1.0,
+              "decision_cost": 0.25833333333333336,
+              "errors_retained": 62,
+              "retained": 240,
+              "risk": 0.25833333333333336,
+              "windows": 240
+            },
+            "clean": {
+              "coverage": 1.0,
+              "decision_cost": 0.25833333333333336,
+              "errors_retained": 62,
+              "retained": 240,
+              "risk": 0.25833333333333336,
+              "windows": 240
+            },
+            "sustained": {
+              "coverage": 1.0,
+              "decision_cost": 0.25833333333333336,
+              "errors_retained": 62,
+              "retained": 240,
+              "risk": 0.25833333333333336,
+              "windows": 240
+            }
+          },
+          "source_fingerprint": "ce975c127c43810ecd1ac7fe7904027e695f872de7421be52d349faaea88737d",
+          "threshold": 0.5,
+          "validation_cost": 0.25833333333333336
+        }
+      },
+      "scale_means": [
+        -0.07038998503219998,
+        0.05386341956283488
+      ],
+      "scale_standard_deviations": [
+        0.45979399568025753,
+        0.47230349988223175
+      ],
+      "scaler_source_fingerprint": "22ee00fdc5683772c9ead5376fc176cdfc04ed9c4ac72493e63b8b67b3afbd95",
+      "seed": 307,
+      "training_prior": 0.2675925925925926
+    }
+  ],
+  "selected_model": "cnn"
+}
